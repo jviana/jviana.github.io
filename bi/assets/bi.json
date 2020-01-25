@@ -1,0 +1,1265 @@
+{
+  "data": [{
+    "href": "bi bi-alarm-fill",
+    "text": "Alarm fill",
+    "img": "bi-alarm-fill"
+  }, {
+    "href": "bi bi-alarm",
+    "text": "Alarm",
+    "img": "bi-alarm"
+  }, {
+    "href": "bi bi-alert-circle-fill",
+    "text": "Alert circle fill",
+    "img": "bi-alert-circle-fill"
+  }, {
+    "href": "bi bi-alert-circle",
+    "text": "Alert circle",
+    "img": "bi-alert-circle"
+  }, {
+    "href": "bi bi-alert-octagon-fill",
+    "text": "Alert octagon fill",
+    "img": "bi-alert-octagon-fill"
+  }, {
+    "href": "bi bi-alert-octagon",
+    "text": "Alert octagon",
+    "img": "bi-alert-octagon"
+  }, {
+    "href": "bi bi-alert-square-fill",
+    "text": "Alert square fill",
+    "img": "bi-alert-square-fill"
+  }, {
+    "href": "bi bi-alert-square",
+    "text": "Alert square",
+    "img": "bi-alert-square"
+  }, {
+    "href": "bi bi-alert-triangle-fill",
+    "text": "Alert triangle fill",
+    "img": "bi-alert-triangle-fill"
+  }, {
+    "href": "bi bi-alert-triangle",
+    "text": "Alert triangle",
+    "img": "bi-alert-triangle"
+  }, {
+    "href": "bi bi-archive-fill",
+    "text": "Archive fill",
+    "img": "bi-archive-fill"
+  }, {
+    "href": "bi bi-archive",
+    "text": "Archive",
+    "img": "bi-archive"
+  }, {
+    "href": "bi bi-arrow-bar-bottom",
+    "text": "Arrow bar bottom",
+    "img": "bi-arrow-bar-bottom"
+  }, {
+    "href": "bi bi-arrow-bar-left",
+    "text": "Arrow bar left",
+    "img": "bi-arrow-bar-left"
+  }, {
+    "href": "bi bi-arrow-bar-right",
+    "text": "Arrow bar right",
+    "img": "bi-arrow-bar-right"
+  }, {
+    "href": "bi bi-arrow-bar-up",
+    "text": "Arrow bar up",
+    "img": "bi-arrow-bar-up"
+  }, {
+    "href": "bi bi-arrow-clockwise",
+    "text": "Arrow clockwise",
+    "img": "bi-arrow-clockwise"
+  }, {
+    "href": "bi bi-arrow-counterclockwise",
+    "text": "Arrow counterclockwise",
+    "img": "bi-arrow-counterclockwise"
+  }, {
+    "href": "bi bi-arrow-down-left",
+    "text": "Arrow down left",
+    "img": "bi-arrow-down-left"
+  }, {
+    "href": "bi bi-arrow-down-right",
+    "text": "Arrow down right",
+    "img": "bi-arrow-down-right"
+  }, {
+    "href": "bi bi-arrow-down-short",
+    "text": "Arrow down short",
+    "img": "bi-arrow-down-short"
+  }, {
+    "href": "bi bi-arrow-down",
+    "text": "Arrow down",
+    "img": "bi-arrow-down"
+  }, {
+    "href": "bi bi-arrow-left-right",
+    "text": "Arrow left right",
+    "img": "bi-arrow-left-right"
+  }, {
+    "href": "bi bi-arrow-left-short",
+    "text": "Arrow left short",
+    "img": "bi-arrow-left-short"
+  }, {
+    "href": "bi bi-arrow-left",
+    "text": "Arrow left",
+    "img": "bi-arrow-left"
+  }, {
+    "href": "bi bi-arrow-repeat",
+    "text": "Arrow repeat",
+    "img": "bi-arrow-repeat"
+  }, {
+    "href": "bi bi-arrow-right-short",
+    "text": "Arrow right short",
+    "img": "bi-arrow-right-short"
+  }, {
+    "href": "bi bi-arrow-right",
+    "text": "Arrow right",
+    "img": "bi-arrow-right"
+  }, {
+    "href": "bi bi-arrow-up-down",
+    "text": "Arrow up down",
+    "img": "bi-arrow-up-down"
+  }, {
+    "href": "bi bi-arrow-up-left",
+    "text": "Arrow up left",
+    "img": "bi-arrow-up-left"
+  }, {
+    "href": "bi bi-arrow-up-right",
+    "text": "Arrow up right",
+    "img": "bi-arrow-up-right"
+  }, {
+    "href": "bi bi-arrow-up-short",
+    "text": "Arrow up short",
+    "img": "bi-arrow-up-short"
+  }, {
+    "href": "bi bi-arrow-up",
+    "text": "Arrow up",
+    "img": "bi-arrow-up"
+  }, {
+    "href": "bi bi-arrows-angle-contract",
+    "text": "Arrows angle contract",
+    "img": "bi-arrows-angle-contract"
+  }, {
+    "href": "bi bi-arrows-angle-expand",
+    "text": "Arrows angle expand",
+    "img": "bi-arrows-angle-expand"
+  }, {
+    "href": "bi bi-arrows-collapse",
+    "text": "Arrows collapse",
+    "img": "bi-arrows-collapse"
+  }, {
+    "href": "bi bi-arrows-expand",
+    "text": "Arrows expand",
+    "img": "bi-arrows-expand"
+  }, {
+    "href": "bi bi-arrows-fullscreen",
+    "text": "Arrows fullscreen",
+    "img": "bi-arrows-fullscreen"
+  }, {
+    "href": "bi bi-at",
+    "text": "At",
+    "img": "bi-at"
+  }, {
+    "href": "bi bi-award",
+    "text": "Award",
+    "img": "bi-award"
+  }, {
+    "href": "bi bi-backspace-fill",
+    "text": "Backspace fill",
+    "img": "bi-backspace-fill"
+  }, {
+    "href": "bi bi-backspace-reverse-fill",
+    "text": "Backspace reverse fill",
+    "img": "bi-backspace-reverse-fill"
+  }, {
+    "href": "bi bi-backspace-reverse",
+    "text": "Backspace reverse",
+    "img": "bi-backspace-reverse"
+  }, {
+    "href": "bi bi-backspace",
+    "text": "Backspace",
+    "img": "bi-backspace"
+  }, {
+    "href": "bi bi-bar-chart-fill",
+    "text": "Bar chart fill",
+    "img": "bi-bar-chart-fill"
+  }, {
+    "href": "bi bi-bar-chart",
+    "text": "Bar chart",
+    "img": "bi-bar-chart"
+  }, {
+    "href": "bi bi-battery-charging",
+    "text": "Battery charging",
+    "img": "bi-battery-charging"
+  }, {
+    "href": "bi bi-battery-full",
+    "text": "Battery full",
+    "img": "bi-battery-full"
+  }, {
+    "href": "bi bi-battery",
+    "text": "Battery",
+    "img": "bi-battery"
+  }, {
+    "href": "bi bi-bell-fill",
+    "text": "Bell fill",
+    "img": "bi-bell-fill"
+  }, {
+    "href": "bi bi-bell",
+    "text": "Bell",
+    "img": "bi-bell"
+  }, {
+    "href": "bi bi-blockquote-left",
+    "text": "Blockquote left",
+    "img": "bi-blockquote-left"
+  }, {
+    "href": "bi bi-blockquote-right",
+    "text": "Blockquote right",
+    "img": "bi-blockquote-right"
+  }, {
+    "href": "bi bi-book-half-fill",
+    "text": "Book half fill",
+    "img": "bi-book-half-fill"
+  }, {
+    "href": "bi bi-book",
+    "text": "Book",
+    "img": "bi-book"
+  }, {
+    "href": "bi bi-bookmark-fill",
+    "text": "Bookmark fill",
+    "img": "bi-bookmark-fill"
+  }, {
+    "href": "bi bi-bookmark",
+    "text": "Bookmark",
+    "img": "bi-bookmark"
+  }, {
+    "href": "bi bi-bootstrap-fill",
+    "text": "Bootstrap fill",
+    "img": "bi-bootstrap-fill"
+  }, {
+    "href": "bi bi-bootstrap-reboot",
+    "text": "Bootstrap reboot",
+    "img": "bi-bootstrap-reboot"
+  }, {
+    "href": "bi bi-bootstrap",
+    "text": "Bootstrap",
+    "img": "bi-bootstrap"
+  }, {
+    "href": "bi bi-box-arrow-bottom-left",
+    "text": "Box arrow bottom left",
+    "img": "bi-box-arrow-bottom-left"
+  }, {
+    "href": "bi bi-box-arrow-bottom-right",
+    "text": "Box arrow bottom right",
+    "img": "bi-box-arrow-bottom-right"
+  }, {
+    "href": "bi bi-box-arrow-down",
+    "text": "Box arrow down",
+    "img": "bi-box-arrow-down"
+  }, {
+    "href": "bi bi-box-arrow-left",
+    "text": "Box arrow left",
+    "img": "bi-box-arrow-left"
+  }, {
+    "href": "bi bi-box-arrow-right",
+    "text": "Box arrow right",
+    "img": "bi-box-arrow-right"
+  }, {
+    "href": "bi bi-box-arrow-up-left",
+    "text": "Box arrow up left",
+    "img": "bi-box-arrow-up-left"
+  }, {
+    "href": "bi bi-box-arrow-up-right",
+    "text": "Box arrow up right",
+    "img": "bi-box-arrow-up-right"
+  }, {
+    "href": "bi bi-box-arrow-up",
+    "text": "Box arrow up",
+    "img": "bi-box-arrow-up"
+  }, {
+    "href": "bi bi-braces",
+    "text": "Braces",
+    "img": "bi-braces"
+  }, {
+    "href": "bi bi-brightness-fill-high",
+    "text": "Brightness fill high",
+    "img": "bi-brightness-fill-high"
+  }, {
+    "href": "bi bi-brightness-fill-low",
+    "text": "Brightness fill low",
+    "img": "bi-brightness-fill-low"
+  }, {
+    "href": "bi bi-brightness-high",
+    "text": "Brightness high",
+    "img": "bi-brightness-high"
+  }, {
+    "href": "bi bi-brightness-low",
+    "text": "Brightness low",
+    "img": "bi-brightness-low"
+  }, {
+    "href": "bi bi-brush",
+    "text": "Brush",
+    "img": "bi-brush"
+  }, {
+    "href": "bi bi-bucket-fill",
+    "text": "Bucket fill",
+    "img": "bi-bucket-fill"
+  }, {
+    "href": "bi bi-bucket",
+    "text": "Bucket",
+    "img": "bi-bucket"
+  }, {
+    "href": "bi bi-building",
+    "text": "Building",
+    "img": "bi-building"
+  }, {
+    "href": "bi bi-bullseye",
+    "text": "Bullseye",
+    "img": "bi-bullseye"
+  }, {
+    "href": "bi bi-calendar-fill",
+    "text": "Calendar fill",
+    "img": "bi-calendar-fill"
+  }, {
+    "href": "bi bi-calendar",
+    "text": "Calendar",
+    "img": "bi-calendar"
+  }, {
+    "href": "bi bi-camera-video-fill",
+    "text": "Camera video fill",
+    "img": "bi-camera-video-fill"
+  }, {
+    "href": "bi bi-camera-video",
+    "text": "Camera video",
+    "img": "bi-camera-video"
+  }, {
+    "href": "bi bi-camera",
+    "text": "Camera",
+    "img": "bi-camera"
+  }, {
+    "href": "bi bi-capslock-fill",
+    "text": "Capslock fill",
+    "img": "bi-capslock-fill"
+  }, {
+    "href": "bi bi-capslock",
+    "text": "Capslock",
+    "img": "bi-capslock"
+  }, {
+    "href": "bi bi-chat-fill",
+    "text": "Chat fill",
+    "img": "bi-chat-fill"
+  }, {
+    "href": "bi bi-chat",
+    "text": "Chat",
+    "img": "bi-chat"
+  }, {
+    "href": "bi bi-check-box",
+    "text": "Check box",
+    "img": "bi-check-box"
+  }, {
+    "href": "bi bi-check-circle",
+    "text": "Check circle",
+    "img": "bi-check-circle"
+  }, {
+    "href": "bi bi-check",
+    "text": "Check",
+    "img": "bi-check"
+  }, {
+    "href": "bi bi-chevron-compact-down",
+    "text": "Chevron compact down",
+    "img": "bi-chevron-compact-down"
+  }, {
+    "href": "bi bi-chevron-compact-left",
+    "text": "Chevron compact left",
+    "img": "bi-chevron-compact-left"
+  }, {
+    "href": "bi bi-chevron-compact-right",
+    "text": "Chevron compact right",
+    "img": "bi-chevron-compact-right"
+  }, {
+    "href": "bi bi-chevron-compact-up",
+    "text": "Chevron compact up",
+    "img": "bi-chevron-compact-up"
+  }, {
+    "href": "bi bi-chevron-down",
+    "text": "Chevron down",
+    "img": "bi-chevron-down"
+  }, {
+    "href": "bi bi-chevron-left",
+    "text": "Chevron left",
+    "img": "bi-chevron-left"
+  }, {
+    "href": "bi bi-chevron-right",
+    "text": "Chevron right",
+    "img": "bi-chevron-right"
+  }, {
+    "href": "bi bi-chevron-up",
+    "text": "Chevron up",
+    "img": "bi-chevron-up"
+  }, {
+    "href": "bi bi-circle-fill",
+    "text": "Circle fill",
+    "img": "bi-circle-fill"
+  }, {
+    "href": "bi bi-circle-half",
+    "text": "Circle half",
+    "img": "bi-circle-half"
+  }, {
+    "href": "bi bi-circle-slash",
+    "text": "Circle slash",
+    "img": "bi-circle-slash"
+  }, {
+    "href": "bi bi-circle",
+    "text": "Circle",
+    "img": "bi-circle"
+  }, {
+    "href": "bi bi-clock-fill",
+    "text": "Clock fill",
+    "img": "bi-clock-fill"
+  }, {
+    "href": "bi bi-clock",
+    "text": "Clock",
+    "img": "bi-clock"
+  }, {
+    "href": "bi bi-cloud-download",
+    "text": "Cloud download",
+    "img": "bi-cloud-download"
+  }, {
+    "href": "bi bi-cloud-fill",
+    "text": "Cloud fill",
+    "img": "bi-cloud-fill"
+  }, {
+    "href": "bi bi-cloud-upload",
+    "text": "Cloud upload",
+    "img": "bi-cloud-upload"
+  }, {
+    "href": "bi bi-cloud",
+    "text": "Cloud",
+    "img": "bi-cloud"
+  }, {
+    "href": "bi bi-code-slash",
+    "text": "Code slash",
+    "img": "bi-code-slash"
+  }, {
+    "href": "bi bi-code",
+    "text": "Code",
+    "img": "bi-code"
+  }, {
+    "href": "bi bi-columns-gutters",
+    "text": "Columns gutters",
+    "img": "bi-columns-gutters"
+  }, {
+    "href": "bi bi-columns",
+    "text": "Columns",
+    "img": "bi-columns"
+  }, {
+    "href": "bi bi-command",
+    "text": "Command",
+    "img": "bi-command"
+  }, {
+    "href": "bi bi-compass",
+    "text": "Compass",
+    "img": "bi-compass"
+  }, {
+    "href": "bi bi-cone-striped",
+    "text": "Cone striped",
+    "img": "bi-cone-striped"
+  }, {
+    "href": "bi bi-cone",
+    "text": "Cone",
+    "img": "bi-cone"
+  }, {
+    "href": "bi bi-controller",
+    "text": "Controller",
+    "img": "bi-controller"
+  }, {
+    "href": "bi bi-credit-card",
+    "text": "Credit card",
+    "img": "bi-credit-card"
+  }, {
+    "href": "bi bi-cursor-fill",
+    "text": "Cursor fill",
+    "img": "bi-cursor-fill"
+  }, {
+    "href": "bi bi-cursor",
+    "text": "Cursor",
+    "img": "bi-cursor"
+  }, {
+    "href": "bi bi-dash",
+    "text": "Dash",
+    "img": "bi-dash"
+  }, {
+    "href": "bi bi-diamond-half",
+    "text": "Diamond half",
+    "img": "bi-diamond-half"
+  }, {
+    "href": "bi bi-diamond",
+    "text": "Diamond",
+    "img": "bi-diamond"
+  }, {
+    "href": "bi bi-display-fill",
+    "text": "Display fill",
+    "img": "bi-display-fill"
+  }, {
+    "href": "bi bi-display",
+    "text": "Display",
+    "img": "bi-display"
+  }, {
+    "href": "bi bi-document-code",
+    "text": "Document code",
+    "img": "bi-document-code"
+  }, {
+    "href": "bi bi-document-diff",
+    "text": "Document diff",
+    "img": "bi-document-diff"
+  }, {
+    "href": "bi bi-document-richtext",
+    "text": "Document richtext",
+    "img": "bi-document-richtext"
+  }, {
+    "href": "bi bi-document-spreadsheet",
+    "text": "Document spreadsheet",
+    "img": "bi-document-spreadsheet"
+  }, {
+    "href": "bi bi-document-text",
+    "text": "Document text",
+    "img": "bi-document-text"
+  }, {
+    "href": "bi bi-document",
+    "text": "Document",
+    "img": "bi-document"
+  }, {
+    "href": "bi bi-documents-alt",
+    "text": "Documents alt",
+    "img": "bi-documents-alt"
+  }, {
+    "href": "bi bi-documents",
+    "text": "Documents",
+    "img": "bi-documents"
+  }, {
+    "href": "bi bi-dot",
+    "text": "Dot",
+    "img": "bi-dot"
+  }, {
+    "href": "bi bi-download",
+    "text": "Download",
+    "img": "bi-download"
+  }, {
+    "href": "bi bi-egg-fried",
+    "text": "Egg fried",
+    "img": "bi-egg-fried"
+  }, {
+    "href": "bi bi-eject-fill",
+    "text": "Eject fill",
+    "img": "bi-eject-fill"
+  }, {
+    "href": "bi bi-eject",
+    "text": "Eject",
+    "img": "bi-eject"
+  }, {
+    "href": "bi bi-envelope-fill",
+    "text": "Envelope fill",
+    "img": "bi-envelope-fill"
+  }, {
+    "href": "bi bi-envelope-open-fill",
+    "text": "Envelope open fill",
+    "img": "bi-envelope-open-fill"
+  }, {
+    "href": "bi bi-envelope-open",
+    "text": "Envelope open",
+    "img": "bi-envelope-open"
+  }, {
+    "href": "bi bi-envelope",
+    "text": "Envelope",
+    "img": "bi-envelope"
+  }, {
+    "href": "bi bi-eye-fill",
+    "text": "Eye fill",
+    "img": "bi-eye-fill"
+  }, {
+    "href": "bi bi-eye-slash-fill",
+    "text": "Eye slash fill",
+    "img": "bi-eye-slash-fill"
+  }, {
+    "href": "bi bi-eye-slash",
+    "text": "Eye slash",
+    "img": "bi-eye-slash"
+  }, {
+    "href": "bi bi-eye",
+    "text": "Eye",
+    "img": "bi-eye"
+  }, {
+    "href": "bi bi-filter",
+    "text": "Filter",
+    "img": "bi-filter"
+  }, {
+    "href": "bi bi-flag-fill",
+    "text": "Flag fill",
+    "img": "bi-flag-fill"
+  }, {
+    "href": "bi bi-flag",
+    "text": "Flag",
+    "img": "bi-flag"
+  }, {
+    "href": "bi bi-folder-fill",
+    "text": "Folder fill",
+    "img": "bi-folder-fill"
+  }, {
+    "href": "bi bi-folder-symlink-fill",
+    "text": "Folder symlink fill",
+    "img": "bi-folder-symlink-fill"
+  }, {
+    "href": "bi bi-folder-symlink",
+    "text": "Folder symlink",
+    "img": "bi-folder-symlink"
+  }, {
+    "href": "bi bi-folder",
+    "text": "Folder",
+    "img": "bi-folder"
+  }, {
+    "href": "bi bi-fonts",
+    "text": "Fonts",
+    "img": "bi-fonts"
+  }, {
+    "href": "bi bi-forward-fill",
+    "text": "Forward fill",
+    "img": "bi-forward-fill"
+  }, {
+    "href": "bi bi-forward",
+    "text": "Forward",
+    "img": "bi-forward"
+  }, {
+    "href": "bi bi-gear-fill",
+    "text": "Gear fill",
+    "img": "bi-gear-fill"
+  }, {
+    "href": "bi bi-gear-wide-connected",
+    "text": "Gear wide connected",
+    "img": "bi-gear-wide-connected"
+  }, {
+    "href": "bi bi-gear-wide",
+    "text": "Gear wide",
+    "img": "bi-gear-wide"
+  }, {
+    "href": "bi bi-gear",
+    "text": "Gear",
+    "img": "bi-gear"
+  }, {
+    "href": "bi bi-geo",
+    "text": "Geo",
+    "img": "bi-geo"
+  }, {
+    "href": "bi bi-graph-down",
+    "text": "Graph down",
+    "img": "bi-graph-down"
+  }, {
+    "href": "bi bi-graph-up",
+    "text": "Graph up",
+    "img": "bi-graph-up"
+  }, {
+    "href": "bi bi-grid-fill",
+    "text": "Grid fill",
+    "img": "bi-grid-fill"
+  }, {
+    "href": "bi bi-grid",
+    "text": "Grid",
+    "img": "bi-grid"
+  }, {
+    "href": "bi bi-hammer",
+    "text": "Hammer",
+    "img": "bi-hammer"
+  }, {
+    "href": "bi bi-hash",
+    "text": "Hash",
+    "img": "bi-hash"
+  }, {
+    "href": "bi bi-heart-fill",
+    "text": "Heart fill",
+    "img": "bi-heart-fill"
+  }, {
+    "href": "bi bi-heart",
+    "text": "Heart",
+    "img": "bi-heart"
+  }, {
+    "href": "bi bi-house-fill",
+    "text": "House fill",
+    "img": "bi-house-fill"
+  }, {
+    "href": "bi bi-house",
+    "text": "House",
+    "img": "bi-house"
+  }, {
+    "href": "bi bi-image-alt",
+    "text": "Image alt",
+    "img": "bi-image-alt"
+  }, {
+    "href": "bi bi-image-fill",
+    "text": "Image fill",
+    "img": "bi-image-fill"
+  }, {
+    "href": "bi bi-image",
+    "text": "Image",
+    "img": "bi-image"
+  }, {
+    "href": "bi bi-images",
+    "text": "Images",
+    "img": "bi-images"
+  }, {
+    "href": "bi bi-inbox-fill",
+    "text": "Inbox fill",
+    "img": "bi-inbox-fill"
+  }, {
+    "href": "bi bi-inbox",
+    "text": "Inbox",
+    "img": "bi-inbox"
+  }, {
+    "href": "bi bi-inboxes-fill",
+    "text": "Inboxes fill",
+    "img": "bi-inboxes-fill"
+  }, {
+    "href": "bi bi-inboxes",
+    "text": "Inboxes",
+    "img": "bi-inboxes"
+  }, {
+    "href": "bi bi-info-fill",
+    "text": "Info fill",
+    "img": "bi-info-fill"
+  }, {
+    "href": "bi bi-info-square-fill",
+    "text": "Info square fill",
+    "img": "bi-info-square-fill"
+  }, {
+    "href": "bi bi-info-square",
+    "text": "Info square",
+    "img": "bi-info-square"
+  }, {
+    "href": "bi bi-info",
+    "text": "Info",
+    "img": "bi-info"
+  }, {
+    "href": "bi bi-justify-left",
+    "text": "Justify left",
+    "img": "bi-justify-left"
+  }, {
+    "href": "bi bi-justify-right",
+    "text": "Justify right",
+    "img": "bi-justify-right"
+  }, {
+    "href": "bi bi-justify",
+    "text": "Justify",
+    "img": "bi-justify"
+  }, {
+    "href": "bi bi-kanban-fill",
+    "text": "Kanban fill",
+    "img": "bi-kanban-fill"
+  }, {
+    "href": "bi bi-kanban",
+    "text": "Kanban",
+    "img": "bi-kanban"
+  }, {
+    "href": "bi bi-laptop",
+    "text": "Laptop",
+    "img": "bi-laptop"
+  }, {
+    "href": "bi bi-layout-sidebar-reverse",
+    "text": "Layout sidebar reverse",
+    "img": "bi-layout-sidebar-reverse"
+  }, {
+    "href": "bi bi-layout-sidebar",
+    "text": "Layout sidebar",
+    "img": "bi-layout-sidebar"
+  }, {
+    "href": "bi bi-layout-split",
+    "text": "Layout split",
+    "img": "bi-layout-split"
+  }, {
+    "href": "bi bi-list-check",
+    "text": "List check",
+    "img": "bi-list-check"
+  }, {
+    "href": "bi bi-list-ol",
+    "text": "List ol",
+    "img": "bi-list-ol"
+  }, {
+    "href": "bi bi-list-task",
+    "text": "List task",
+    "img": "bi-list-task"
+  }, {
+    "href": "bi bi-list-ul",
+    "text": "List ul",
+    "img": "bi-list-ul"
+  }, {
+    "href": "bi bi-list",
+    "text": "List",
+    "img": "bi-list"
+  }, {
+    "href": "bi bi-lock-fill",
+    "text": "Lock fill",
+    "img": "bi-lock-fill"
+  }, {
+    "href": "bi bi-lock",
+    "text": "Lock",
+    "img": "bi-lock"
+  }, {
+    "href": "bi bi-map",
+    "text": "Map",
+    "img": "bi-map"
+  }, {
+    "href": "bi bi-mic",
+    "text": "Mic",
+    "img": "bi-mic"
+  }, {
+    "href": "bi bi-moon",
+    "text": "Moon",
+    "img": "bi-moon"
+  }, {
+    "href": "bi bi-music-player-fill",
+    "text": "Music player fill",
+    "img": "bi-music-player-fill"
+  }, {
+    "href": "bi bi-music-player",
+    "text": "Music player",
+    "img": "bi-music-player"
+  }, {
+    "href": "bi bi-option",
+    "text": "Option",
+    "img": "bi-option"
+  }, {
+    "href": "bi bi-outlet",
+    "text": "Outlet",
+    "img": "bi-outlet"
+  }, {
+    "href": "bi bi-pause-fill",
+    "text": "Pause fill",
+    "img": "bi-pause-fill"
+  }, {
+    "href": "bi bi-pause",
+    "text": "Pause",
+    "img": "bi-pause"
+  }, {
+    "href": "bi bi-pen",
+    "text": "Pen",
+    "img": "bi-pen"
+  }, {
+    "href": "bi bi-pencil",
+    "text": "Pencil",
+    "img": "bi-pencil"
+  }, {
+    "href": "bi bi-people-fill",
+    "text": "People fill",
+    "img": "bi-people-fill"
+  }, {
+    "href": "bi bi-people",
+    "text": "People",
+    "img": "bi-people"
+  }, {
+    "href": "bi bi-person-fill",
+    "text": "Person fill",
+    "img": "bi-person-fill"
+  }, {
+    "href": "bi bi-person",
+    "text": "Person",
+    "img": "bi-person"
+  }, {
+    "href": "bi bi-phone-landscape",
+    "text": "Phone landscape",
+    "img": "bi-phone-landscape"
+  }, {
+    "href": "bi bi-phone",
+    "text": "Phone",
+    "img": "bi-phone"
+  }, {
+    "href": "bi bi-pie-chart-fill",
+    "text": "Pie chart fill",
+    "img": "bi-pie-chart-fill"
+  }, {
+    "href": "bi bi-pie-chart",
+    "text": "Pie chart",
+    "img": "bi-pie-chart"
+  }, {
+    "href": "bi bi-play-fill",
+    "text": "Play fill",
+    "img": "bi-play-fill"
+  }, {
+    "href": "bi bi-play",
+    "text": "Play",
+    "img": "bi-play"
+  }, {
+    "href": "bi bi-plug",
+    "text": "Plug",
+    "img": "bi-plug"
+  }, {
+    "href": "bi bi-plus",
+    "text": "Plus",
+    "img": "bi-plus"
+  }, {
+    "href": "bi bi-power",
+    "text": "Power",
+    "img": "bi-power"
+  }, {
+    "href": "bi bi-question-fill",
+    "text": "Question fill",
+    "img": "bi-question-fill"
+  }, {
+    "href": "bi bi-question-square-fill",
+    "text": "Question square fill",
+    "img": "bi-question-square-fill"
+  }, {
+    "href": "bi bi-question-square",
+    "text": "Question square",
+    "img": "bi-question-square"
+  }, {
+    "href": "bi bi-question",
+    "text": "Question",
+    "img": "bi-question"
+  }, {
+    "href": "bi bi-reply-all-fill",
+    "text": "Reply all fill",
+    "img": "bi-reply-all-fill"
+  }, {
+    "href": "bi bi-reply-all",
+    "text": "Reply all",
+    "img": "bi-reply-all"
+  }, {
+    "href": "bi bi-reply-fill",
+    "text": "Reply fill",
+    "img": "bi-reply-fill"
+  }, {
+    "href": "bi bi-reply",
+    "text": "Reply",
+    "img": "bi-reply"
+  }, {
+    "href": "bi bi-screwdriver",
+    "text": "Screwdriver",
+    "img": "bi-screwdriver"
+  }, {
+    "href": "bi bi-search",
+    "text": "Search",
+    "img": "bi-search"
+  }, {
+    "href": "bi bi-shield-fill",
+    "text": "Shield fill",
+    "img": "bi-shield-fill"
+  }, {
+    "href": "bi bi-shield-lock-fill",
+    "text": "Shield lock fill",
+    "img": "bi-shield-lock-fill"
+  }, {
+    "href": "bi bi-shield-lock",
+    "text": "Shield lock",
+    "img": "bi-shield-lock"
+  }, {
+    "href": "bi bi-shield-shaded",
+    "text": "Shield shaded",
+    "img": "bi-shield-shaded"
+  }, {
+    "href": "bi bi-shield",
+    "text": "Shield",
+    "img": "bi-shield"
+  }, {
+    "href": "bi bi-shift-fill",
+    "text": "Shift fill",
+    "img": "bi-shift-fill"
+  }, {
+    "href": "bi bi-shift",
+    "text": "Shift",
+    "img": "bi-shift"
+  }, {
+    "href": "bi bi-skip-backward-fill",
+    "text": "Skip backward fill",
+    "img": "bi-skip-backward-fill"
+  }, {
+    "href": "bi bi-skip-backward",
+    "text": "Skip backward",
+    "img": "bi-skip-backward"
+  }, {
+    "href": "bi bi-skip-end-fill",
+    "text": "Skip end fill",
+    "img": "bi-skip-end-fill"
+  }, {
+    "href": "bi bi-skip-end",
+    "text": "Skip end",
+    "img": "bi-skip-end"
+  }, {
+    "href": "bi bi-skip-forward-fill",
+    "text": "Skip forward fill",
+    "img": "bi-skip-forward-fill"
+  }, {
+    "href": "bi bi-skip-forward",
+    "text": "Skip forward",
+    "img": "bi-skip-forward"
+  }, {
+    "href": "bi bi-skip-start-fill",
+    "text": "Skip start fill",
+    "img": "bi-skip-start-fill"
+  }, {
+    "href": "bi bi-skip-start",
+    "text": "Skip start",
+    "img": "bi-skip-start"
+  }, {
+    "href": "bi bi-speaker",
+    "text": "Speaker",
+    "img": "bi-speaker"
+  }, {
+    "href": "bi bi-square-fill",
+    "text": "Square fill",
+    "img": "bi-square-fill"
+  }, {
+    "href": "bi bi-square-half",
+    "text": "Square half",
+    "img": "bi-square-half"
+  }, {
+    "href": "bi bi-square",
+    "text": "Square",
+    "img": "bi-square"
+  }, {
+    "href": "bi bi-star-fill",
+    "text": "Star fill",
+    "img": "bi-star-fill"
+  }, {
+    "href": "bi bi-star-half",
+    "text": "Star half",
+    "img": "bi-star-half"
+  }, {
+    "href": "bi bi-star",
+    "text": "Star",
+    "img": "bi-star"
+  }, {
+    "href": "bi bi-stop-fill",
+    "text": "Stop fill",
+    "img": "bi-stop-fill"
+  }, {
+    "href": "bi bi-stop",
+    "text": "Stop",
+    "img": "bi-stop"
+  }, {
+    "href": "bi bi-stopwatch-fill",
+    "text": "Stopwatch fill",
+    "img": "bi-stopwatch-fill"
+  }, {
+    "href": "bi bi-stopwatch",
+    "text": "Stopwatch",
+    "img": "bi-stopwatch"
+  }, {
+    "href": "bi bi-sun",
+    "text": "Sun",
+    "img": "bi-sun"
+  }, {
+    "href": "bi bi-table",
+    "text": "Table",
+    "img": "bi-table"
+  }, {
+    "href": "bi bi-tablet-landscape",
+    "text": "Tablet landscape",
+    "img": "bi-tablet-landscape"
+  }, {
+    "href": "bi bi-tablet",
+    "text": "Tablet",
+    "img": "bi-tablet"
+  }, {
+    "href": "bi bi-tag-fill",
+    "text": "Tag fill",
+    "img": "bi-tag-fill"
+  }, {
+    "href": "bi bi-tag",
+    "text": "Tag",
+    "img": "bi-tag"
+  }, {
+    "href": "bi bi-terminal-fill",
+    "text": "Terminal fill",
+    "img": "bi-terminal-fill"
+  }, {
+    "href": "bi bi-terminal",
+    "text": "Terminal",
+    "img": "bi-terminal"
+  }, {
+    "href": "bi bi-text-center",
+    "text": "Text center",
+    "img": "bi-text-center"
+  }, {
+    "href": "bi bi-text-indent-left",
+    "text": "Text indent left",
+    "img": "bi-text-indent-left"
+  }, {
+    "href": "bi bi-text-indent-right",
+    "text": "Text indent right",
+    "img": "bi-text-indent-right"
+  }, {
+    "href": "bi bi-text-left",
+    "text": "Text left",
+    "img": "bi-text-left"
+  }, {
+    "href": "bi bi-text-right",
+    "text": "Text right",
+    "img": "bi-text-right"
+  }, {
+    "href": "bi bi-three-dots-vertical",
+    "text": "Three dots vertical",
+    "img": "bi-three-dots-vertical"
+  }, {
+    "href": "bi bi-three-dots",
+    "text": "Three dots",
+    "img": "bi-three-dots"
+  }, {
+    "href": "bi bi-toggle-off",
+    "text": "Toggle off",
+    "img": "bi-toggle-off"
+  }, {
+    "href": "bi bi-toggle-on",
+    "text": "Toggle on",
+    "img": "bi-toggle-on"
+  }, {
+    "href": "bi bi-toggles",
+    "text": "Toggles",
+    "img": "bi-toggles"
+  }, {
+    "href": "bi bi-tools",
+    "text": "Tools",
+    "img": "bi-tools"
+  }, {
+    "href": "bi bi-trash-fill",
+    "text": "Trash fill",
+    "img": "bi-trash-fill"
+  }, {
+    "href": "bi bi-trash",
+    "text": "Trash",
+    "img": "bi-trash"
+  }, {
+    "href": "bi bi-triangle-fill",
+    "text": "Triangle fill",
+    "img": "bi-triangle-fill"
+  }, {
+    "href": "bi bi-triangle-half",
+    "text": "Triangle half",
+    "img": "bi-triangle-half"
+  }, {
+    "href": "bi bi-triangle",
+    "text": "Triangle",
+    "img": "bi-triangle"
+  }, {
+    "href": "bi bi-trophy",
+    "text": "Trophy",
+    "img": "bi-trophy"
+  }, {
+    "href": "bi bi-tv-fill",
+    "text": "Tv fill",
+    "img": "bi-tv-fill"
+  }, {
+    "href": "bi bi-tv",
+    "text": "Tv",
+    "img": "bi-tv"
+  }, {
+    "href": "bi bi-type-bold",
+    "text": "Type bold",
+    "img": "bi-type-bold"
+  }, {
+    "href": "bi bi-type-h1",
+    "text": "Type h1",
+    "img": "bi-type-h1"
+  }, {
+    "href": "bi bi-type-h2",
+    "text": "Type h2",
+    "img": "bi-type-h2"
+  }, {
+    "href": "bi bi-type-h3",
+    "text": "Type h3",
+    "img": "bi-type-h3"
+  }, {
+    "href": "bi bi-type-italic",
+    "text": "Type italic",
+    "img": "bi-type-italic"
+  }, {
+    "href": "bi bi-type-strikethrough",
+    "text": "Type strikethrough",
+    "img": "bi-type-strikethrough"
+  }, {
+    "href": "bi bi-type-underline",
+    "text": "Type underline",
+    "img": "bi-type-underline"
+  }, {
+    "href": "bi bi-type",
+    "text": "Type",
+    "img": "bi-type"
+  }, {
+    "href": "bi bi-unlock-fill",
+    "text": "Unlock fill",
+    "img": "bi-unlock-fill"
+  }, {
+    "href": "bi bi-unlock",
+    "text": "Unlock",
+    "img": "bi-unlock"
+  }, {
+    "href": "bi bi-upload",
+    "text": "Upload",
+    "img": "bi-upload"
+  }, {
+    "href": "bi bi-volume-down-fill",
+    "text": "Volume down fill",
+    "img": "bi-volume-down-fill"
+  }, {
+    "href": "bi bi-volume-down",
+    "text": "Volume down",
+    "img": "bi-volume-down"
+  }, {
+    "href": "bi bi-volume-mute-fill",
+    "text": "Volume mute fill",
+    "img": "bi-volume-mute-fill"
+  }, {
+    "href": "bi bi-volume-mute",
+    "text": "Volume mute",
+    "img": "bi-volume-mute"
+  }, {
+    "href": "bi bi-volume-up-fill",
+    "text": "Volume up fill",
+    "img": "bi-volume-up-fill"
+  }, {
+    "href": "bi bi-volume-up",
+    "text": "Volume up",
+    "img": "bi-volume-up"
+  }, {
+    "href": "bi bi-wallet",
+    "text": "Wallet",
+    "img": "bi-wallet"
+  }, {
+    "href": "bi bi-watch",
+    "text": "Watch",
+    "img": "bi-watch"
+  }, {
+    "href": "bi bi-wifi",
+    "text": "Wifi",
+    "img": "bi-wifi"
+  }, {
+    "href": "bi bi-window",
+    "text": "Window",
+    "img": "bi-window"
+  }, {
+    "href": "bi bi-wrench",
+    "text": "Wrench",
+    "img": "bi-wrench"
+  }, {
+    "href": "bi bi-x-circle-fill",
+    "text": "X circle fill",
+    "img": "bi-x-circle-fill"
+  }, {
+    "href": "bi bi-x-circle",
+    "text": "X circle",
+    "img": "bi-x-circle"
+  }, {
+    "href": "bi bi-x-octagon-fill",
+    "text": "X octagon fill",
+    "img": "bi-x-octagon-fill"
+  }, {
+    "href": "bi bi-x-octagon",
+    "text": "X octagon",
+    "img": "bi-x-octagon"
+  }, {
+    "href": "bi bi-x-square-fill",
+    "text": "X square fill",
+    "img": "bi-x-square-fill"
+  }, {
+    "href": "bi bi-x-square",
+    "text": "X square",
+    "img": "bi-x-square"
+  }, {
+    "href": "bi bi-x",
+    "text": "X",
+    "img": "bi-x"
+  }],
+  "source": "Bootstrap (icons)",
+  "count": 315
+}
