@@ -1,0 +1,8 @@
+#ignore file named readme.txt
+#readme.txt
+
+# ignore folder named node_modules
+node_modules/
+
+#ignore all .txt files
+# *.txt
