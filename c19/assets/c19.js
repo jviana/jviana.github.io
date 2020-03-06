@@ -3,12 +3,12 @@ class C19 {
         console.log('started...');
     }
     setBars (data) {
-        let liAreaTemplate;
+        let barContent;
         $.each(data, function (i, d) {
-            liAreaTemplate = $('ul#identificadores-list').find('li.template').html();
-            liAreaTemplate = liAreaTemplate.replace(/{{idname}}/g, d.descricao);
-            liAreaTemplate = liAreaTemplate.replace(/{{idvalue}}/g, d.valor);
-            $('ul#identificadores-list').append(`<li>${liAreaTemplate}</li>`);
+            barContent = $('div#day-template').html();
+            barContent = barContent.replace(/{{date}}/g, d.date);
+            barContent = barContent.replace(/{{ptConfirmed}}/g, d.ptConfirmed);
+            $('div#main-content-bars').append(`${barContent}`);
         });
         // 2. new row
     }
@@ -16,12 +16,11 @@ class C19 {
         console.log('chart started...');
     }
     getData () {
-        fetch('https://jviana.github.io/c19/data/c19.json', {
-            mode: 'no-cors', // Useful for including session ID (and, IIRC, authorization headers)
-          })
+        self = this;
+        fetch('https://jviana.github.io/c19/data/c19.json')
         .then(response => response.json())
         .then(data => {
-            console.log(data) // Prints result from `response.json()` in getRequest
+            self.setBars(data.results);
         })
         .catch(error => console.error(error))
     }
