@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/jviana/jviana.github.io/issues"
   },
-  "homepage": "https://github.com/jviana/jviana.github.io#readme"
+  "homepage": "https://github.com/jviana/jviana.github.io#readme",
+  "keywords": [
+    "covid19"
+  ]
 }
