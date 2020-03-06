@@ -1,5 +1,15 @@
 html, body, div {
+  background-color: #f1f3f5;
   font-family: 'Open Sans Condensed', sans-serif;
+  color: rgb(51, 68, 85);
+}
+
+.main-title {
+  color: rgb(116, 95, 181);
+}
+
+.subtext {
+  color: rgb(158, 170, 182);
 }
 
 .day {

@@ -1,0 +1,34 @@
+{
+    "results": [
+      {
+        "date": "20200301",
+        "ptConfirmed": 0
+      },
+      {
+        "date": "20200302",
+        "ptConfirmed": 2
+      },
+      {
+        "date": "20200303",
+        "ptConfirmed": 2
+      },
+      {
+        "date": "20200304",
+        "ptConfirmed": 2
+      },
+      {
+        "date": "20200305",
+        "ptConfirmed": 3
+      },
+      {
+        "date": "20200306",
+        "ptConfirmed": 0
+      }
+    ],
+    "info": {
+      "subject": "Covid-19 PT",
+      "author": "JV",
+      "page": 1,
+      "version": "0.1"
+    }
+  }
