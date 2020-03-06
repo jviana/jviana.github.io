@@ -2,15 +2,22 @@ class C19 {
     constructor () {
         console.log('started...');
     }
+
     setBars (data) {
         let barContent;
+        let total;
+        total = 0;
         $.each(data, function (i, d) {
+            let date;
+            let day;
+            date = moment(d.date, 'YYYYMMDD');
+            day = date.format('DD');
             barContent = $('div#day-template').html();
-            barContent = barContent.replace(/{{date}}/g, d.date);
+            barContent = barContent.replace(/{{date}}/g, day);
             barContent = barContent.replace(/{{ptConfirmed}}/g, d.ptConfirmed);
+            total += d.ptConfirmed;
             $('div#main-content-bars').append(`${barContent}`);
         });
-        // 2. new row
     }
     setChart () {
         console.log('chart started...');
