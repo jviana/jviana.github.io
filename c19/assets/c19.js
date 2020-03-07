@@ -25,10 +25,11 @@ class C19 {
     }
 
     setFooter (source, lastDate) {
-        const lastSourceContainer = $('lastsource');
-        const lastUpdateContainer = $('lastupdate');
+        const lastSourceContainer = $('#lastsource');
+        const lastUpdateContainer = $('#lastupdate');
         lastSourceContainer.html(`<a href="${source.lastURL}">${source.lastDescription}</a>`);
-        lastUpdateContainer.html(lastDate);
+        lastUpdateContainer.html(lastDate.format('DD-MM-YYYY'));
+        console.log(source);
     }
 
     setBars (globalInfo) {
