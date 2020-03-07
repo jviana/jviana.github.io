@@ -22,7 +22,7 @@
 
   <div class="container mt-2">
     <div class="row">
-      
+
       <div class="col-lg-2">
         <div class="row">
           <div class="col-12">
@@ -62,7 +62,8 @@
             </div>
             <div class="col-11">
               <div class="progress">
-                <div class="progress-bar bg-info bars" data-ismax="{{ismax}}" role="progressbar" aria-valuenow="{{percentage}}%" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-info bars" data-ismax="{{ismax}}" role="progressbar"
+                  aria-valuenow="{{percentage}}%" aria-valuemin="0" aria-valuemax="100">
                   {{ptConfirmed}}
                 </div>
               </div>
@@ -71,8 +72,14 @@
         </div>
       </div>
     </div>
-  </div>
-  </div>
+  </div> 
+
+  <nav class="navbar fixed-bottom navbar-light bg-light subtext small">
+    <div class="row w-100">
+      <div class="col-6 text-left">Última fonte: <span id="lastsource"></span></div>
+      <div class="col-6 text-right">Última atualização: <span id="lastupdate"></span></div>
+    </div>
+  </nav>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

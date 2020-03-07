@@ -29,6 +29,10 @@
         "ptConfirmed": 8
       }
     ],
+    "sources": {
+      "lastdescription": "SIC Notícias",
+      "lastURL": "https://sicnoticias.pt/"
+    },
     "info": {
       "subject": "Covid-19 PT",
       "author": "JV",

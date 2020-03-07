@@ -24,11 +24,20 @@ class C19 {
         });
     }
 
-    setBars (data) {
+    setFooter (source, lastDate) {
+        const lastSourceContainer = $('lastsource');
+        const lastUpdateContainer = $('lastupdate');
+        lastSourceContainer.html(`<a href="${source.lastURL}">${source.lastDescription}</a>`);
+        lastUpdateContainer.html(lastDate);
+    }
+
+    setBars (globalInfo) {
         const self = this;
+        const data = globalInfo.results;
         let barContent;
         this.totalPT = data.reduce((acc, d) => acc + d.ptConfirmed, 0);
         this.maxPT = Math.max.apply(Math, data.map(d => d.ptConfirmed));
+        let lastDate;
         $.each(data, function (i, d) {
             const date = moment(d.date, 'YYYYMMDD');
             const day = date.format('DD');
@@ -42,8 +51,10 @@ class C19 {
             $('div#main-content-bars').append(`${barContent}`);
             $('div#main-content-bars').find('.progress-bar:last').css('width', '0%');
             $('div#main-content-bars').find('.progress-bar:last').css('width', self.getPercentage(self.maxPT, ptConfirmed) + '%');
+            lastDate = date;
         });
         this.displayTotalConfirmed();
+        this.setFooter(globalInfo.sources, lastDate);
         setTimeout(() => self.setLayoutTweaks(), 1000);
     }
 
@@ -56,7 +67,7 @@ class C19 {
         fetch('https://jviana.github.io/c19/data/c19.json')
             .then(response => response.json())
             .then(data => {
-                self.setBars(data.results);
+                self.setBars(data);
             })
             .catch(error => console.error(error));
     }
