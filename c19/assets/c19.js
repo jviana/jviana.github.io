@@ -13,6 +13,10 @@ class C19 {
         return percentage;
     }
 
+    displayTotalConfirmed () {
+        $('#totalConfirmed').html(this.totalPT);
+    }
+
     setBars (data) {
         const self = this;
         let barContent;
@@ -30,6 +34,7 @@ class C19 {
             $('div#main-content-bars').find('.progress-bar:last').css('width', '0%');
             $('div#main-content-bars').find('.progress-bar:last').css('width', self.getPercentage(self.maxPT, d.ptConfirmed) + '%');
         });
+        this.displayTotalConfirmed();
     }
 
     setChart () {
