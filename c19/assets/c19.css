@@ -19,12 +19,12 @@ html, body {
 .day {
   font-size: 0.8rem;
   padding-top: 4px;
-  line-height: 11px;
+  line-height: 7px;
 }
 
 .bars {
-  -webkit-transition: width 1s ease-in-out;
-  -moz-transition: width 1s ease-in-out;
-  -o-transition: width 1s ease-in-out;
-  transition: width 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }

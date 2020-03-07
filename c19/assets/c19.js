@@ -9,12 +9,19 @@ class C19 {
         let percentage;
         percentage = value / total * 100;
         percentage = percentage.toFixed(0);
-        console.log(percentage);
         return percentage;
     }
 
     displayTotalConfirmed () {
         $('#totalConfirmed').html(this.totalPT);
+    }
+
+    setLayoutTweaks () {
+        const barsmax = $('div#main-content-bars').find('div.progress-bar[data-ismax="1"]');
+        $.each(barsmax, function (i, bar) {
+            $(bar).removeClass('bg-info').addClass('bg-danger');
+            $(bar).parent().parent().prev().addClass('text-danger');
+        });
     }
 
     setBars (data) {
@@ -25,16 +32,19 @@ class C19 {
         $.each(data, function (i, d) {
             const date = moment(d.date, 'YYYYMMDD');
             const day = date.format('DD');
+            const ptConfirmed = d.ptConfirmed;
+            const ismax = (ptConfirmed === self.maxPT) ? 1 : 0;
             barContent = $('div#day-template').html();
             barContent = barContent.replace(/{{date}}/g, day);
-            barContent = barContent.replace(/{{ptConfirmed}}/g, d.ptConfirmed);
-            // barContent = barContent.replace(/{{percentage}}/g, 0);
-            barContent = barContent.replace(/{{percentage}}/g, self.getPercentage(self.maxPT, d.ptConfirmed));
+            barContent = barContent.replace(/{{ptConfirmed}}/g, ptConfirmed);
+            barContent = barContent.replace(/{{percentage}}/g, self.getPercentage(self.maxPT, ptConfirmed));
+            barContent = barContent.replace(/{{ismax}}/g, ismax);
             $('div#main-content-bars').append(`${barContent}`);
             $('div#main-content-bars').find('.progress-bar:last').css('width', '0%');
-            $('div#main-content-bars').find('.progress-bar:last').css('width', self.getPercentage(self.maxPT, d.ptConfirmed) + '%');
+            $('div#main-content-bars').find('.progress-bar:last').css('width', self.getPercentage(self.maxPT, ptConfirmed) + '%');
         });
         this.displayTotalConfirmed();
+        setTimeout(() => self.setLayoutTweaks(), 1000);
     }
 
     setChart () {
