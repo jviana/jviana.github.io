@@ -12,8 +12,19 @@ html, body {
   color: rgb(158, 170, 182);
 }
 
+.small {
+  font-size: 11px;
+}
+
 .day {
   font-size: 0.8rem;
   padding-top: 4px;
   line-height: 11px;
+}
+
+.bars {
+  -webkit-transition: width 1s ease-in-out;
+  -moz-transition: width 1s ease-in-out;
+  -o-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
 }
