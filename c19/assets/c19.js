@@ -6,6 +6,9 @@ class C19 {
         this.maxPT = 0;
         // Create Set
         this.months = new Set();
+        this.flags = {
+            monthsRendered: false
+        }
     }
 
     getPercentage (total, value) {
@@ -36,7 +39,9 @@ class C19 {
     }
 
     resetInfo () {
-        $('div#main-content-months').find('button').slice(1).remove();
+        if (!this.flags.monthsRendered) {
+            $('div#main-content-months').find('button').slice(1).remove();
+        }
         $('div#main-content-bars').find('div.row-day').slice(1).remove();
     }
 
@@ -64,6 +69,7 @@ class C19 {
                 self.getData();
             });
         });
+        this.flags.monthsRendered = true;
     }
 
     setBars (globalInfo) {
@@ -99,7 +105,9 @@ class C19 {
             lastDate = date;
         });
         this.displayTotalConfirmed();
-        this.setMonths();
+        if (!this.flags.monthsRendered) {
+            this.setMonths();
+        }
         this.setFooter(globalInfo.sources, lastDate);
         setTimeout(() => self.setLayoutTweaks(), 1000);
     }
