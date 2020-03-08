@@ -30,14 +30,14 @@
       },
       {
         "date": "20200308",
-        "ptConfirmed": 7
+        "ptConfirmed": 9
       }
     ],
     "sources": {
-      "lastDescription": "RTP",
-      "lastURL": "https://www.rtp.pt/",
-      "lastDescription1": "SIC Notícias",
-      "lastURL1": "https://sicnoticias.pt/"
+      "lastDescription1": "RTP",
+      "lastURL1": "https://www.rtp.pt/",
+      "lastDescription": "SIC Notícias",
+      "lastURL": "https://sicnoticias.pt/"
     },
     "info": {
       "subject": "Covid-19 PT",
