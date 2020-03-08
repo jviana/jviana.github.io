@@ -2,6 +2,7 @@
 class C19 {
     constructor () {
         this.totalPT = 0;
+        this.totalDeceasedPT = 0;
         this.maxPT = 0;
     }
 
@@ -14,6 +15,7 @@ class C19 {
 
     displayTotalConfirmed () {
         $('#totalConfirmed').html(this.totalPT);
+        $('#totalConfirmedDeceased').html(this.totalDeceasedPT);
     }
 
     setLayoutTweaks () {

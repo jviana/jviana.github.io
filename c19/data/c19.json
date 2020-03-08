@@ -27,6 +27,10 @@
       {
         "date": "20200307",
         "ptConfirmed": 8
+      },
+      {
+        "date": "20200308",
+        "ptConfirmed": 0
       }
     ],
     "sources": {
