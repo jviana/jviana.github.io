@@ -5,6 +5,7 @@ class C19 {
         this.totalDeceasedPT = 0;
         this.totalRecoveredPT = 0;
         this.maxPT = 0;
+        this.minPT = 0;
         // Create Set
         this.months = new Set();
         this.flags = {
@@ -27,9 +28,14 @@ class C19 {
 
     setLayoutTweaks () {
         const barsmax = $('div#main-content-bars').find('div.progress-bar[data-ismax="1"]');
+        const barsmin = $('div#main-content-bars').find('div.progress-bar[data-ismin="1"]');
         $.each(barsmax, function (i, bar) {
             $(bar).removeClass('bg-info').addClass('bg-danger');
             $(bar).parent().parent().prev().addClass('text-danger');
+        });
+        $.each(barsmin, function (i, bar) {
+            $(bar).removeClass('bg-info').addClass('bg-success');
+            $(bar).parent().parent().prev().addClass('text-success');
         });
     }
 
@@ -80,6 +86,7 @@ class C19 {
         let barContent;
         this.totalPT = data.reduce((acc, d) => acc + d.ptConfirmed, 0);
         this.maxPT = Math.max.apply(Math, data.map(d => d.ptConfirmed));
+        this.minPT = Math.min.apply(Math, data.map(d => d.ptConfirmed));
         let lastDate;
         let lastBarRendered;
         moment.locale('pt');
@@ -89,12 +96,14 @@ class C19 {
             const month = date.format('MMMM');
             const ptConfirmed = d.ptConfirmed;
             const ismax = (ptConfirmed === self.maxPT) ? 1 : 0;
+            const ismin = (ptConfirmed === self.minPT) ? 1 : 0;
             self.months.add(month);
             barContent = $('div#day-template').html();
             barContent = barContent.replace(/{{date}}/g, day);
             barContent = barContent.replace(/{{ptConfirmed}}/g, ptConfirmed);
             barContent = barContent.replace(/{{percentage}}/g, self.getPercentage(self.maxPT, ptConfirmed));
             barContent = barContent.replace(/{{ismax}}/g, ismax);
+            barContent = barContent.replace(/{{ismin}}/g, ismin);
             $('div#main-content-bars').append(`${barContent}`);
             lastBarRendered = $('div#main-content-bars').find('.progress-bar:last');
             lastBarRendered.css('width', '0%');
