@@ -3,6 +3,7 @@ class C19 {
     constructor () {
         this.totalPT = 0;
         this.totalDeceasedPT = 0;
+        this.totalRecoveredPT = 0;
         this.maxPT = 0;
         // Create Set
         this.months = new Set();
@@ -21,6 +22,7 @@ class C19 {
     displayTotalConfirmed () {
         $('#totalConfirmed').html(this.totalPT);
         $('#totalConfirmedDeceased').html(this.totalDeceasedPT);
+        $('#totalRecovered').html(this.totalRecoveredPT);
     }
 
     setLayoutTweaks () {
@@ -83,7 +85,7 @@ class C19 {
         moment.locale('pt');
         $.each(data, function (i, d) {
             const date = moment(d.date, 'YYYYMMDD');
-            const day = date.format('DD');
+            const day = date.format('D');
             const month = date.format('MMMM');
             const ptConfirmed = d.ptConfirmed;
             const ismax = (ptConfirmed === self.maxPT) ? 1 : 0;
