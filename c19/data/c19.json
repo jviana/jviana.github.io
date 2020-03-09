@@ -34,16 +34,16 @@
       },
       {
         "date": "20200309",
-        "ptConfirmed": 0
+        "ptConfirmed": 3
       }
     ],
     "sources": {
       "lastDescription1": "RTP",
       "lastURL1": "https://www.rtp.pt/",
-      "lastDescription2": "SIC Notícias",
-      "lastURL2": "https://sicnoticias.pt/",
-      "lastDescription": "Expresso",
-      "lastURL": "https://expresso.pt/"
+      "lastDescription": "SIC Notícias",
+      "lastURL": "https://sicnoticias.pt/",
+      "lastDescription2": "Expresso",
+      "lastURL2": "https://expresso.pt/"
     },
     "hospitals": {
       
