@@ -2,39 +2,63 @@
     "results": [
       {
         "date": "20200301",
-        "ptConfirmed": 0
+        "ptConfirmed": 0,
+        "ptRecovered": 0,
+        "ptDeceased":0
       },
       {
         "date": "20200302",
-        "ptConfirmed": 2
+        "ptConfirmed": 2,
+        "ptRecovered": 0,
+        "ptDeceased":0
       },
       {
         "date": "20200303",
-        "ptConfirmed": 2
+        "ptConfirmed": 2,
+        "ptRecovered": 0,
+        "ptDeceased":0
       },
       {
         "date": "20200304",
-        "ptConfirmed": 2
+        "ptConfirmed": 2,
+        "ptRecovered": 0,
+        "ptDeceased":0
       },
       {
         "date": "20200305",
-        "ptConfirmed": 3
+        "ptConfirmed": 3,
+        "ptRecovered": 0,
+        "ptDeceased":0
       },
       {
         "date": "20200306",
-        "ptConfirmed": 4
+        "ptConfirmed": 4,
+        "ptRecovered": 0,
+        "ptDeceased":0
       },
       {
         "date": "20200307",
-        "ptConfirmed": 8
+        "ptConfirmed": 8,
+        "ptRecovered": 0,
+        "ptDeceased":0
       },
       {
         "date": "20200308",
-        "ptConfirmed": 10
+        "ptConfirmed": 10,
+        "ptRecovered": 0,
+        "ptDeceased":0
       },
       {
         "date": "20200309",
-        "ptConfirmed": 8
+        "ptConfirmed": 8,
+        "ptRecovered": 0,
+        "ptDeceased":0
+      },
+      {
+        "date": "20200310",
+        "ptConfirmed": 0,
+        "ptRecovered": 0,
+        "ptDeceased":0
       }
     ],
     "sources": {
@@ -45,9 +69,7 @@
       "lastDescription2": "Expresso",
       "lastURL2": "https://expresso.pt/"
     },
-    "hospitals": {
-      
-    },
+    "hospitals": {},
     "info": {
       "subject": "Covid-19 PT",
       "author": "JV",
