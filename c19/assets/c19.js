@@ -10,7 +10,25 @@ class C19 {
         this.months = new Set();
         this.flags = {
             monthsRendered: false
-        }
+        };
+    }
+
+    animateNumericVaue (elem, start, end, duration) {
+        const range = end - start;
+        const increment = end > start ? 1 : -1;
+        const obj = $('#' + elem);
+        let stepTime;
+        let current;
+        let timer;
+        stepTime = Math.abs(Math.floor(duration / range));
+        current = start;
+        timer = setInterval(function () {
+            current += increment;
+            obj.html(current);
+            if (current === end) {
+                clearInterval(timer);
+            }
+        }, stepTime);
     }
 
     getPercentage (total, value) {
@@ -21,9 +39,14 @@ class C19 {
     }
 
     displayTotalConfirmed () {
-        $('#totalConfirmed').html(this.totalPT);
-        $('#totalConfirmedDeceased').html(this.totalDeceasedPT);
-        $('#totalRecovered').html(this.totalRecoveredPT);
+        // STATIC
+        // $('#totalConfirmed').html(this.totalPT);
+        // $('#totalConfirmedDeceased').html(this.totalDeceasedPT);
+        // $('#totalRecovered').html(this.totalRecoveredPT);
+        // ANIMATED
+        this.animateNumericVaue('totalConfirmed', 0, this.totalPT, 470);
+        this.animateNumericVaue('totalRecoveredPT', 0, this.totalRecoveredPT, 400);
+
     }
 
     setLayoutTweaks () {
@@ -37,6 +60,7 @@ class C19 {
             $(bar).removeClass('bg-info').addClass('bg-success');
             $(bar).parent().parent().prev().addClass('text-success');
         });
+        // this.animateNumericVaue('teste', 0, 41, 200);
     }
 
     setFooter (source, lastDate) {
