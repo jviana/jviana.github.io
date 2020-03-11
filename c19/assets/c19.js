@@ -17,10 +17,9 @@ class C19 {
         const range = end - start;
         const increment = end > start ? 1 : -1;
         const obj = $('#' + elem);
-        let stepTime;
+        const stepTime = Math.abs(Math.floor(duration / range));
         let current;
         let timer;
-        stepTime = Math.abs(Math.floor(duration / range));
         current = start;
         if (start === end) {
             obj.html(current);
