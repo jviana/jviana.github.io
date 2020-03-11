@@ -62,9 +62,9 @@
       },
       {
         "date": "20200311",
-        "ptConfirmed": 0,
+        "ptConfirmed": 18,
         "ptRecovered": 0,
-        "ptDeceased":0
+        "ptDeceased": 0
       }
     ],
     "sources": {
@@ -72,8 +72,10 @@
       "lastURL1": "https://www.rtp.pt/",
       "lastDescription2": "SIC Notícias",
       "lastURL2": "https://sicnoticias.pt/",
-      "lastDescription": "Expresso",
-      "lastURL": "https://expresso.pt/"
+      "lastDescription3": "Expresso",
+      "lastURL3": "https://expresso.pt/",
+      "lastDescription": "DGS",
+      "lastURL": "https://www.dgs.pt/corona-virus/documentos/boletim-informativo.aspx"
     },
     "hospitals": {},
     "info": {
