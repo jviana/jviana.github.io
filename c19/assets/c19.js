@@ -22,13 +22,17 @@ class C19 {
         let timer;
         stepTime = Math.abs(Math.floor(duration / range));
         current = start;
-        timer = setInterval(function () {
-            current += increment;
+        if (start === end) {
             obj.html(current);
-            if (current === end) {
-                clearInterval(timer);
-            }
-        }, stepTime);
+        } else {
+            timer = setInterval(function () {
+                current += increment;
+                obj.html(current);
+                if (current === end) {
+                    clearInterval(timer);
+                }
+            }, stepTime);
+        }
     }
 
     getPercentage (total, value) {
@@ -45,8 +49,7 @@ class C19 {
         // $('#totalRecovered').html(this.totalRecoveredPT);
         // ANIMATED
         this.animateNumericVaue('totalConfirmed', 0, this.totalPT, 470);
-        this.animateNumericVaue('totalRecoveredPT', 0, this.totalRecoveredPT, 400);
-
+        this.animateNumericVaue('totalRecovered', 0, this.totalRecoveredPT, 400);
     }
 
     setLayoutTweaks () {
