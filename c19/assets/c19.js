@@ -48,8 +48,10 @@ class C19 {
         // $('#totalConfirmedDeceased').html(this.totalDeceasedPT);
         // $('#totalRecovered').html(this.totalRecoveredPT);
         // ANIMATED
-        this.animateNumericVaue('totalConfirmed', 0, this.totalPT, 470);
-        this.animateNumericVaue('totalRecovered', 0, this.totalRecoveredPT, 400);
+        const duration = 500;
+        this.animateNumericVaue('totalConfirmed', 0, this.totalPT, duration);
+        this.animateNumericVaue('totalRecovered', 0, this.totalRecoveredPT, duration);
+        this.animateNumericVaue('totalDeceased', 0, this.totalDeceasedPT, duration);
     }
 
     setLayoutTweaks () {
