@@ -4,6 +4,11 @@ class C19 {
         this.totalPT = 0;
         this.totalDeceasedPT = 0;
         this.totalRecoveredPT = 0;
+        this.percentage = {
+            totalPT: 0,
+            totalDeceasedPT: 0,
+            totalRecoveredPT: 0
+        }
         this.maxPT = 0;
         this.minPT = 0;
         // Create Set
@@ -35,10 +40,10 @@ class C19 {
         }
     }
 
-    getPercentage (total, value) {
+    getPercentage (total, value, decimalDigits = 0) {
         let percentage;
         percentage = value / total * 100;
-        percentage = percentage.toFixed(0);
+        percentage = percentage.toFixed(decimalDigits);
         return percentage;
     }
 
@@ -52,6 +57,9 @@ class C19 {
         this.animateNumericVaue('totalConfirmed', 0, this.totalPT, duration);
         this.animateNumericVaue('totalRecovered', 0, this.totalRecoveredPT, duration);
         this.animateNumericVaue('totalDeceased', 0, this.totalDeceasedPT, duration);
+        // percentage
+        console.log(this.percentage.totalRecoveredPT);
+        console.log(this.percentage.totalDeceasedPT);
     }
 
     setLayoutTweaks () {
@@ -113,9 +121,13 @@ class C19 {
         const self = this;
         const data = globalInfo.results;
         let barContent;
+        // Total =======
         this.totalPT = data.reduce((acc, d) => acc + d.ptConfirmed, 0);
         this.totalRecoveredPT = data.reduce((acc, d) => acc + d.ptRecovered, 0);
         this.totalDeceasedPT = data.reduce((acc, d) => acc + d.ptDeceased, 0);
+        // Percentage ==
+        this.percentage.totalRecoveredPT = this.getPercentage(this.totalPT, this.totalRecoveredPT, 2);
+        this.percentage.totalDeceasedPT = this.getPercentage(this.totalPT, this.totalDeceasedPT, 2);
         this.maxPT = Math.max.apply(Math, data.map(d => d.ptConfirmed));
         this.minPT = Math.min.apply(Math, data.map(d => d.ptConfirmed));
         let lastDate;
