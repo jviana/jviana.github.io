@@ -114,6 +114,8 @@ class C19 {
         const data = globalInfo.results;
         let barContent;
         this.totalPT = data.reduce((acc, d) => acc + d.ptConfirmed, 0);
+        this.totalRecoveredPT = data.reduce((acc, d) => acc + d.ptRecovered, 0);
+        this.totalDeceasedPT = data.reduce((acc, d) => acc + d.ptDeceased, 0);
         this.maxPT = Math.max.apply(Math, data.map(d => d.ptConfirmed));
         this.minPT = Math.min.apply(Math, data.map(d => d.ptConfirmed));
         let lastDate;
