@@ -158,7 +158,7 @@ class C19 {
 
     getData () {
         const self = this;
-        fetch('https://jviana.github.io/c19/data/c19.json')
+        fetch(this.dataURL)
             .then(response => response.json())
             .then(data => {
                 self.setBars(data);
