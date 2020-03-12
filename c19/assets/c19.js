@@ -11,6 +11,7 @@ class C19 {
         this.flags = {
             monthsRendered: false
         };
+        this.dataURL = 'https://jviana.github.io/c19/data/c19.json?v=' + Math.floor(Math.random() * (1000 - 1 + 1) + 1);
     }
 
     animateNumericVaue (elem, start, end, duration) {
