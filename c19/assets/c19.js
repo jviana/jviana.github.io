@@ -29,10 +29,14 @@ class C19 {
             let intermediateValue;
             if (decimalDigits === 0) {
                 intermediateValue = Math.floor(progress * end);
-                obj.html(intermediateValue + aditionalCharacter);
+                if (intermediateValue <= end) {
+                    obj.html(intermediateValue + aditionalCharacter);
+                }
             } else {
                 intermediateValue = progress * end;
-                obj.html(intermediateValue.toFixed(2) + aditionalCharacter);
+                if (intermediateValue <= end) {
+                    obj.html(intermediateValue.toFixed(2) + aditionalCharacter);
+                }
             }
             if (progress < 1) {
                 requestAnimationFrame(step);
