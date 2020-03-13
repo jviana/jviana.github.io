@@ -31,11 +31,15 @@ class C19 {
                 intermediateValue = Math.floor(progress * end);
                 if (intermediateValue <= end) {
                     obj.html(intermediateValue + aditionalCharacter);
+                } else {
+                    obj.html(end);
                 }
             } else {
                 intermediateValue = progress * end;
                 if (intermediateValue <= end) {
                     obj.html(intermediateValue.toFixed(2) + aditionalCharacter);
+                } else {
+                    obj.html(end.toFixed(2) + aditionalCharacter);
                 }
             }
             if (progress < 1) {
