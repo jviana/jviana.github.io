@@ -19,7 +19,29 @@ class C19 {
         this.dataURL = 'https://jviana.github.io/c19/data/c19.json?v=' + Math.floor(Math.random() * (1000 - 1 + 1) + 1);
     }
 
-    animateNumericVaue (elem, start, end, duration, decimalDigits) {
+    animateNumericValue2 (elem, start, end, duration, decimalDigits, aditionalCharacter = '') {
+        const obj = $('#' + elem);
+        const step = ts => {
+            if (!start) {
+                start = ts;
+            }
+            let progress = (ts - start) / duration;
+            let intermediateValue;
+            if (decimalDigits === 0) {
+                intermediateValue = Math.floor(progress * end);
+                obj.html(intermediateValue + aditionalCharacter);
+            } else {
+                intermediateValue = progress * end;
+                obj.html(intermediateValue.toFixed(2) + aditionalCharacter);
+            }
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            }
+        }
+        requestAnimationFrame(step);
+    }
+
+    animateNumericValue (elem, start, end, duration, decimalDigits) {
         const range = end - start;
         const obj = $('#' + elem);
         let increment;
@@ -74,15 +96,11 @@ class C19 {
         // $('#totalRecovered').html(this.totalRecoveredPT);
         // ANIMATED
         const duration = 500;
-        this.animateNumericVaue('totalConfirmed', 0, this.totalPT, duration, 0);
-        this.animateNumericVaue('totalRecovered', 0, this.totalRecoveredPT, duration * 2, 0);
-        this.animateNumericVaue('totalDeceased', 0, this.totalDeceasedPT, duration, 0);
-        // this.animateNumericVaue('totalRecoveredPercentage', 0, this.percentage.totalRecoveredPT, duration, 2);
+        this.animateNumericValue2('totalConfirmed', 0, this.totalPT, duration, 0);
+        this.animateNumericValue2('totalRecovered', 0, this.totalRecoveredPT, duration, 0);
+        this.animateNumericValue2('totalDeceased', 0, this.totalDeceasedPT, duration, 0);
         // percentage
-        
-        $('#totalRecoveredPercentage').html(this.percentage.totalRecoveredPT.toFixed(2) + '%');
-        // console.log(this.percentage.totalRecoveredPT);
-        // console.log(this.percentage.totalDeceasedPT);
+        this.animateNumericValue2('totalRecoveredPercentage', 0, this.percentage.totalRecoveredPT, duration, 2, '%');
     }
 
     setLayoutTweaks () {
@@ -96,7 +114,6 @@ class C19 {
             $(bar).removeClass('bg-info').addClass('bg-success');
             $(bar).parent().parent().prev().addClass('text-success');
         });
-        // this.animateNumericVaue('teste', 0, 41, 200);
     }
 
     setFooter (source, lastDate) {
@@ -121,15 +138,6 @@ class C19 {
             content = $('div#month-template').html();
             content = content.replace(/{{month}}/g, m);
             $('div#main-content-months').append(`${content}`);
-            /* lastBarRendered = $('div#main-content-bars').find('.progress-bar:last')
-            lastBarRendered.css('width', '0%');
-            lastBarRendered.css('width', self.getPercentage(self.maxPT, ptConfirmed) + '%');
-            // adjust text (ptConfirmed)
-            if (ptConfirmed === 0) {
-                lastBarRendered.addClass('text-dark');
-            }
-            // adjust text (ptConfirmed) --END
-            lastDate = date; */
             $('.btn-month').unbind('click');
             $('.btn-month').click(function (event) {
                 event.preventDefault();
@@ -187,10 +195,6 @@ class C19 {
         }
         this.setFooter(globalInfo.sources, lastDate);
         setTimeout(() => self.setLayoutTweaks(), 1000);
-    }
-
-    setChart () {
-        console.log('chart started...');
     }
 
     getData () {
