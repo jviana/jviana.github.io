@@ -27,6 +27,7 @@ class C19 {
         let current;
         let timer;
         current = start;
+        obj.html(current);
         if (start === end) {
             obj.html(current);
         } else {
@@ -55,11 +56,13 @@ class C19 {
         // ANIMATED
         const duration = 500;
         this.animateNumericVaue('totalConfirmed', 0, this.totalPT, duration);
-        this.animateNumericVaue('totalRecovered', 0, this.totalRecoveredPT, duration);
+        this.animateNumericVaue('totalRecovered', 0, this.totalRecoveredPT, duration * 2);
         this.animateNumericVaue('totalDeceased', 0, this.totalDeceasedPT, duration);
         // percentage
-        console.log(this.percentage.totalRecoveredPT);
-        console.log(this.percentage.totalDeceasedPT);
+        // this.animateNumericVaue('totalConfirmedPercentage', 0, this.percentage.totalRecoveredPT, duration);
+        $('#totalRecoveredPercentage').html(this.percentage.totalRecoveredPT + '%');
+        // console.log(this.percentage.totalRecoveredPT);
+        // console.log(this.percentage.totalDeceasedPT);
     }
 
     setLayoutTweaks () {
@@ -79,7 +82,7 @@ class C19 {
     setFooter (source, lastDate) {
         const lastSourceContainer = $('#lastsource');
         const lastUpdateContainer = $('#lastupdate');
-        lastSourceContainer.html(`<a href="${source.lastURL}">${source.lastDescription}</a>`);
+        lastSourceContainer.html(`<a href="${source.lastURL}" class="text-info">${source.lastDescription}</a>`);
         lastUpdateContainer.html(lastDate.format('DD-MM-YYYY'));
     }
 

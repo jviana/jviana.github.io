@@ -32,3 +32,10 @@ html, body {
 h4 {
   font-size: 1.1rem;
 }
+
+.card-percentage {
+  display: absolute;
+  position: absolute;
+  top: 41px;
+  right: 5px;
+}
