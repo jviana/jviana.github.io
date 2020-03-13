@@ -19,11 +19,20 @@ class C19 {
         this.dataURL = 'https://jviana.github.io/c19/data/c19.json?v=' + Math.floor(Math.random() * (1000 - 1 + 1) + 1);
     }
 
-    animateNumericVaue (elem, start, end, duration) {
+    animateNumericVaue (elem, start, end, duration, decimalDigits) {
         const range = end - start;
-        const increment = end > start ? 1 : -1;
         const obj = $('#' + elem);
-        const stepTime = Math.abs(Math.floor(duration / range));
+        let increment;
+        let stepTime;
+        if (decimalDigits === 0) {
+            increment = end > start ? 1 : -1;
+            stepTime = Math.abs(Math.floor(duration / range));
+        } else {
+            increment = 1 / Math.pow(10, decimalDigits);
+            end = end.toFixed(2);
+            stepTime = 0;
+        }
+        
         let current;
         let timer;
         current = start;
@@ -32,10 +41,20 @@ class C19 {
             obj.html(current);
         } else {
             timer = setInterval(function () {
-                current += increment;
-                obj.html(current);
-                if (current === end) {
-                    clearInterval(timer);
+                if (decimalDigits > 0) {
+                    current = current + increment;
+                    /* console.log(current);
+                    current = current.toFixed(2); */
+                    obj.html(current.toFixed(2) + '%');
+                    if (current.toFixed(2) === end) {
+                        clearInterval(timer);
+                    }
+                } else {
+                    current += increment;
+                    obj.html(current);
+                    if (current === end) {
+                        clearInterval(timer);
+                    }
                 }
             }, stepTime);
         }
@@ -44,7 +63,7 @@ class C19 {
     getPercentage (total, value, decimalDigits = 0) {
         let percentage;
         percentage = value / total * 100;
-        percentage = percentage.toFixed(decimalDigits);
+        // percentage = percentage.toFixed(decimalDigits);
         return percentage;
     }
 
@@ -55,12 +74,13 @@ class C19 {
         // $('#totalRecovered').html(this.totalRecoveredPT);
         // ANIMATED
         const duration = 500;
-        this.animateNumericVaue('totalConfirmed', 0, this.totalPT, duration);
-        this.animateNumericVaue('totalRecovered', 0, this.totalRecoveredPT, duration * 2);
-        this.animateNumericVaue('totalDeceased', 0, this.totalDeceasedPT, duration);
+        this.animateNumericVaue('totalConfirmed', 0, this.totalPT, duration, 0);
+        this.animateNumericVaue('totalRecovered', 0, this.totalRecoveredPT, duration * 2, 0);
+        this.animateNumericVaue('totalDeceased', 0, this.totalDeceasedPT, duration, 0);
+        // this.animateNumericVaue('totalRecoveredPercentage', 0, this.percentage.totalRecoveredPT, duration, 2);
         // percentage
-        // this.animateNumericVaue('totalConfirmedPercentage', 0, this.percentage.totalRecoveredPT, duration);
-        $('#totalRecoveredPercentage').html(this.percentage.totalRecoveredPT + '%');
+        
+        $('#totalRecoveredPercentage').html(this.percentage.totalRecoveredPT.toFixed(2) + '%');
         // console.log(this.percentage.totalRecoveredPT);
         // console.log(this.percentage.totalDeceasedPT);
     }
