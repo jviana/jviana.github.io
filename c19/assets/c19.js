@@ -115,27 +115,33 @@ class C19 {
         // percentage
         this.animateNumericValue2('totalRecoveredPercentage', 0, this.percentage.totalRecoveredPT, duration, 2, '%');
         this.animateNumericValue2('totalDeceasedPercentage', 0, this.percentage.totalDeceasedPT, duration, 2, '%');
-        // total situation (for icon)
+        // total situation (to trending icon)
         let variationIcon;
         let variationIconClass;
+        let totalTrendingPercentage;
         const allBars = $('div#main-content-bars').find('.progress-bar');
         const lastBarRendered = $('div#main-content-bars').find('.progress-bar:last');
         const nBars = Object.keys(allBars).length - 2 - 1;
         const lastButOneBarRendered = allBars[nBars - 1];
-        const lastValue = lastBarRendered.attr('data-ptconfirmed');
-        const lastButOneValue = $(lastButOneBarRendered).attr('data-ptconfirmed');
+        let lastValue = lastBarRendered.attr('data-ptconfirmed');
+        let lastButOneValue = $(lastButOneBarRendered).attr('data-ptconfirmed');
         if (lastValue > lastButOneValue) {
             variationIcon = this.totalVariation.up;
-            variationIconClass = 'text-danger';
+            variationIconClass = 'text-danger';            
         } else if (lastValue < lastButOneValue) {
             variationIcon = this.totalVariation.down;
             variationIconClass = 'text-success';
+            
         } else {
             variationIcon = this.totalVariation.equal;
             variationIconClass = 'text-muted';
         }
         $('#totalConfirmedSituation > i').addClass(variationIconClass);
         $('#totalConfirmedSituation > i').html(variationIcon);
+        totalTrendingPercentage = (lastValue - lastButOneValue) / lastButOneValue * 100;
+        $('#totalTrendingPercentage').addClass(variationIconClass);
+        $('#totalTrendingPercentage').html(totalTrendingPercentage.toFixed(2) + '%');
+        // this.animateNumericValue2('totalTrendingPercentage', 0, totalTrendingPercentage, duration, 2, '%');
     }
 
     setLayoutTweaks () {
