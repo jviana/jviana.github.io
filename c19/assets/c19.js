@@ -112,8 +112,10 @@ class C19 {
     }
 
     setLayoutTweaks () {
+        const todayDateNumeric =  moment().format('YYYYMMDD');
         const barsmax = $('div#main-content-bars').find('div.progress-bar[data-ismax="1"]');
         const barsmin = $('div#main-content-bars').find('div.progress-bar[data-ismin="1"]');
+        const currentDayBar = $('div#main-content-bars').find('div.row-day[data-date="' + todayDateNumeric + '"]').find('div.progress-bar');
         $.each(barsmax, function (i, bar) {
             $(bar).removeClass('bg-info').addClass('bg-danger');
             $(bar).parent().parent().prev().addClass('text-danger');
@@ -122,12 +124,14 @@ class C19 {
             $(bar).removeClass('bg-info').addClass('bg-success');
             $(bar).parent().parent().prev().addClass('text-success');
         });
+        // present day (animation)
+        currentDayBar.addClass('progress-bar-striped progress-bar-animated');
     }
 
     setFooter (source, lastDate) {
         const lastSourceContainer = $('#lastsource');
         const lastUpdateContainer = $('#lastupdate');
-        lastSourceContainer.html(`<a href="${source.lastURL}" class="text-info">${source.lastDescription}</a>`);
+        lastSourceContainer.html(`<a href="${source.lastURL}" class="text-info" target="_blank">${source.lastDescription}</a>`);
         lastUpdateContainer.html(lastDate.format('DD-MM-YYYY'));
     }
 
@@ -179,6 +183,11 @@ class C19 {
             const ptConfirmed = d.ptConfirmed;
             const ismax = (ptConfirmed === self.maxPT) ? 1 : 0;
             const ismin = (ptConfirmed === self.minPT) ? 1 : 0;
+            // dates
+            const dateNumeric = {
+               full: date.format('YYYYMMDD'),
+               month: date.format('MM')
+            }
             self.months.add(month);
             barContent = $('div#day-template').html();
             barContent = barContent.replace(/{{date}}/g, day);
@@ -186,6 +195,8 @@ class C19 {
             barContent = barContent.replace(/{{percentage}}/g, self.getPercentage(self.maxPT, ptConfirmed));
             barContent = barContent.replace(/{{ismax}}/g, ismax);
             barContent = barContent.replace(/{{ismin}}/g, ismin);
+            barContent = barContent.replace(/{{datenum}}/g, dateNumeric.full);
+            barContent = barContent.replace(/{{monthnum}}/g, dateNumeric.month);
             $('div#main-content-bars').append(`${barContent}`);
             lastBarRendered = $('div#main-content-bars').find('.progress-bar:last');
             lastBarRendered.css('width', '0%');
