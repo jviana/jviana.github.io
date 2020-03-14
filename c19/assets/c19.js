@@ -17,6 +17,11 @@ class C19 {
             monthsRendered: false
         };
         this.dataURL = 'https://jviana.github.io/c19/data/c19.json?v=' + Math.floor(Math.random() * (1000 - 1 + 1) + 1);
+        this.totalVariation = {
+            up: 'trending_up',
+            down: 'trending_down',
+            equal: '=',
+        }
     }
 
     animateNumericValue2 (elem, start, end, duration, decimalDigits, aditionalCharacter = '') {
@@ -110,12 +115,28 @@ class C19 {
         // percentage
         this.animateNumericValue2('totalRecoveredPercentage', 0, this.percentage.totalRecoveredPT, duration, 2, '%');
         this.animateNumericValue2('totalDeceasedPercentage', 0, this.percentage.totalDeceasedPT, duration, 2, '%');
-        // total situation
+        // total situation (for icon)
+        let variationIcon;
+        let variationIconClass;
+        const allBars = $('div#main-content-bars').find('.progress-bar');
         const lastBarRendered = $('div#main-content-bars').find('.progress-bar:last');
-        const lastButOneBarRendered = $('div#main-content-bars').find('.progress-bar');
-        // console.log(lastBarRendered.attr('data-ptconfirmed'));
-        // console.log($(lastButOneBarRendered[13]).attr('data-ptconfirmed'));
-        // $('#totalConfirmedSituation > i').html('=');
+        const nBars = Object.keys(allBars).length - 2 - 1;
+        const lastButOneBarRendered = allBars[nBars - 1];
+        const lastValue = lastBarRendered.attr('data-ptconfirmed');
+        const lastButOneValue = $(lastButOneBarRendered).attr('data-ptconfirmed');
+        if (lastValue > lastButOneValue) {
+            variationIcon = this.totalVariation.up;
+            variationIconClass = 'text-danger';
+        } else if (lastValue < lastButOneValue) {
+            variationIcon = this.totalVariation.down;
+            variationIconClass = 'text-success';
+        } else {
+            variationIcon = this.totalVariation.equal;
+            variationIconClass = 'text-muted';
+        }
+        $('#totalConfirmedSituation > i').addClass(variationIconClass);
+        $('#totalConfirmedSituation > i').html(variationIcon);
+        // $('#totalConfirmedSituation > i').removeClass('d-none');
     }
 
     setLayoutTweaks () {
