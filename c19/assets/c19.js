@@ -136,7 +136,6 @@ class C19 {
         }
         $('#totalConfirmedSituation > i').addClass(variationIconClass);
         $('#totalConfirmedSituation > i').html(variationIcon);
-        // $('#totalConfirmedSituation > i').removeClass('d-none');
     }
 
     setLayoutTweaks () {
