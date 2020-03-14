@@ -109,6 +109,13 @@ class C19 {
         this.animateNumericValue2('totalDeceased', 0, this.totalDeceasedPT, duration, 0);
         // percentage
         this.animateNumericValue2('totalRecoveredPercentage', 0, this.percentage.totalRecoveredPT, duration, 2, '%');
+        this.animateNumericValue2('totalDeceasedPercentage', 0, this.percentage.totalDeceasedPT, duration, 2, '%');
+        // total situation
+        const lastBarRendered = $('div#main-content-bars').find('.progress-bar:last');
+        const lastButOneBarRendered = $('div#main-content-bars').find('.progress-bar');
+        // console.log(lastBarRendered.attr('data-ptconfirmed'));
+        // console.log($(lastButOneBarRendered[13]).attr('data-ptconfirmed'));
+        // $('#totalConfirmedSituation > i').html('=');
     }
 
     setLayoutTweaks () {

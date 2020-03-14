@@ -13,6 +13,10 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
   <!-- Flags -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/css/flag-icon.min.css" rel="stylesheet">
+  <!-- Material design icons 
+  https://material.io/resources/icons/?style=baseline
+  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- C19 CSS -->
   <link href="./assets/c19.css" rel="stylesheet">
@@ -53,14 +57,16 @@
           <div class="col-12">
             <div class="row">
               <div class="col-4 col-lg-6">
-
                 <div class="card text-info">
                   <div class="card-body p-1">
                     <h4 class="card-title">
                       Confirmados
                       <div class="subtext small text-uppercase">Total</div>
                     </h4>
-                    <p id="totalConfirmed" class="card-text display-4">-</p>
+                    <p id="totalConfirmed" class="card-text display-4 mb-0">-</p>
+                    <div class="card-percentage" id="totalConfirmedSituation">
+                      <i class="material-icons"></i>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -85,7 +91,8 @@
                       <div class="bg-dark" style="margin: 4px -4px 4px -4px; height: 13px;"></div>
                       <div class="subtext small text-uppercase">Total</div> 
                     </h4>
-                    <p id="totalDeceased" class="card-text display-4">-</p>
+                    <p id="totalDeceased" class="card-text display-4 mb-0">-</p>
+                    <div class="card-percentage" id="totalDeceasedPercentage">-</div>
                   </div>
                 </div>
               </div>
@@ -113,7 +120,7 @@
             </div>
             <div class="col-11">
               <div class="progress">
-                <div class="progress-bar bg-info bars" data-ismax="{{ismax}}" data-ismin="{{ismin}}" role="progressbar" aria-valuenow="{{percentage}}%" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-info bars" data-ptconfirmed="{{ptConfirmed}}" data-ismax="{{ismax}}" data-ismin="{{ismin}}" role="progressbar" aria-valuenow="{{percentage}}%" aria-valuemin="0" aria-valuemax="100">
                   {{ptConfirmed}}
                 </div>
               </div>
