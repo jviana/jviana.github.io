@@ -114,15 +114,18 @@
         </div>
         <div id="day-template" class="d-none">
           <div class="row mt-1 row-day" data-date="{{datenum}}" data-month="{{monthnum}}">
-            <div class="col-1 text-sm-right text-left day">
+            <div class="col-1 col-md-1 text-sm-right text-left day">
               {{date}}
             </div>
-            <div class="col-11">
+            <div class="col-9 col-md-10">
               <div class="progress">
                 <div class="progress-bar bg-info bars" data-ptconfirmed="{{ptConfirmed}}" data-ismax="{{ismax}}" data-ismin="{{ismin}}" role="progressbar" aria-valuenow="{{percentage}}%" aria-valuemin="0" aria-valuemax="100">
                   {{ptConfirmed}}
                 </div>
               </div>
+            </div>
+            <div class="col-2 col-md-1 text-center trending-percentage {{dayVariationClass}}">
+              {{dayVariation}}
             </div>
           </div>
         </div>
@@ -130,7 +133,7 @@
     </div>
     <nav class="navbar fixed-bottom navbar-light bg-light subtext small">
 
-        <div class="col-6 text-dark text-left">Última fonte: <span id="lastsource"></span></div>
+        <div class="col-6 text-dark text-left">Fonte <span class="text-muted">(dos valores absolutos)</span>: <span id="lastsource"></span></div>
         <div class="col-6 text-dark text-right">Última atualização: <span id="lastupdate"></span></div>
       
     </nav>

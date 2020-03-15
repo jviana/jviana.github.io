@@ -8,7 +8,7 @@ class C19 {
             totalPT: 0,
             totalDeceasedPT: 0,
             totalRecoveredPT: 0
-        }
+        };
         this.maxPT = 0;
         this.minPT = 0;
         // Create Set
@@ -20,9 +20,9 @@ class C19 {
         this.totalVariation = {
             up: 'trending_up',
             down: 'trending_down',
-            equal: '=',
-        }
-    }
+            equal: '='
+        };
+    };
 
     animateNumericValue2 (elem, start, end, duration, decimalDigits, aditionalCharacter = '') {
         const obj = $('#' + elem);
@@ -30,7 +30,7 @@ class C19 {
             if (!start) {
                 start = ts;
             }
-            let progress = (ts - start) / duration;
+            const progress = (ts - start) / duration;
             let intermediateValue;
             if (decimalDigits === 0) {
                 intermediateValue = Math.floor(progress * end);
@@ -50,7 +50,7 @@ class C19 {
             if (progress < 1) {
                 requestAnimationFrame(step);
             }
-        }
+        };
         requestAnimationFrame(step);
     }
 
@@ -67,7 +67,7 @@ class C19 {
             end = end.toFixed(2);
             stepTime = 0;
         }
-        
+
         let current;
         let timer;
         current = start;
@@ -95,10 +95,8 @@ class C19 {
         }
     }
 
-    getPercentage (total, value, decimalDigits = 0) {
-        let percentage;
-        percentage = value / total * 100;
-        // percentage = percentage.toFixed(decimalDigits);
+    getPercentage (total, value) {
+        const percentage = value / total * 100;
         return percentage;
     }
 
@@ -118,34 +116,45 @@ class C19 {
         // total situation (to trending icon)
         let variationIcon;
         let variationIconClass;
-        let totalTrendingPercentage;
         const allBars = $('div#main-content-bars').find('.progress-bar');
         const lastBarRendered = $('div#main-content-bars').find('.progress-bar:last');
         const nBars = Object.keys(allBars).length - 2 - 1;
         const lastButOneBarRendered = allBars[nBars - 1];
-        let lastValue = lastBarRendered.attr('data-ptconfirmed');
-        let lastButOneValue = $(lastButOneBarRendered).attr('data-ptconfirmed');
+        const lastValue = lastBarRendered.attr('data-ptconfirmed');
+        const lastButOneValue = $(lastButOneBarRendered).attr('data-ptconfirmed');
         if (lastValue > lastButOneValue) {
             variationIcon = this.totalVariation.up;
-            variationIconClass = 'text-danger';            
+            variationIconClass = 'text-danger';
         } else if (lastValue < lastButOneValue) {
             variationIcon = this.totalVariation.down;
             variationIconClass = 'text-success';
-            
         } else {
             variationIcon = this.totalVariation.equal;
             variationIconClass = 'text-muted';
         }
         $('#totalConfirmedSituation > i').addClass(variationIconClass);
         $('#totalConfirmedSituation > i').html(variationIcon);
-        totalTrendingPercentage = (lastValue - lastButOneValue) / lastButOneValue * 100;
+        /* const totalTrendingPercentage = (lastValue - lastButOneValue) / lastButOneValue * 100;
         $('#totalTrendingPercentage').addClass(variationIconClass);
-        $('#totalTrendingPercentage').html(totalTrendingPercentage.toFixed(2) + '%');
-        // this.animateNumericValue2('totalTrendingPercentage', 0, totalTrendingPercentage, duration, 2, '%');
+        $('#totalTrendingPercentage').html(totalTrendingPercentage.toFixed(2) + '%'); */
+    }
+
+    getVariation (lastValue, lastButOneValue) {
+        let variation;
+        if (lastButOneValue !== 0) {
+            variation = (lastValue - lastButOneValue) / lastButOneValue * 100;
+        } else {
+            if (lastValue === 0) {
+                variation = 0;
+            } else {
+                variation = 0;
+            }
+        }
+        return variation;
     }
 
     setLayoutTweaks () {
-        const todayDateNumeric =  moment().format('YYYYMMDD');
+        const todayDateNumeric = moment().format('YYYYMMDD');
         const barsmax = $('div#main-content-bars').find('div.progress-bar[data-ismax="1"]');
         const barsmin = $('div#main-content-bars').find('div.progress-bar[data-ismin="1"]');
         const currentDayBar = $('div#main-content-bars').find('div.row-day[data-date="' + todayDateNumeric + '"]').find('div.progress-bar');
@@ -197,17 +206,24 @@ class C19 {
         const self = this;
         const data = globalInfo.results;
         let barContent;
+        let lastValue;
+        let lastButOneValue;
         // Total =======
         this.totalPT = data.reduce((acc, d) => acc + d.ptConfirmed, 0);
         this.totalRecoveredPT = data.reduce((acc, d) => acc + d.ptRecovered, 0);
         this.totalDeceasedPT = data.reduce((acc, d) => acc + d.ptDeceased, 0);
         // Percentage ==
-        this.percentage.totalRecoveredPT = this.getPercentage(this.totalPT, this.totalRecoveredPT, 2);
-        this.percentage.totalDeceasedPT = this.getPercentage(this.totalPT, this.totalDeceasedPT, 2);
+        this.percentage.totalRecoveredPT = this.getPercentage(this.totalPT, this.totalRecoveredPT);
+        this.percentage.totalDeceasedPT = this.getPercentage(this.totalPT, this.totalDeceasedPT);
         this.maxPT = Math.max.apply(Math, data.map(d => d.ptConfirmed));
         this.minPT = Math.min.apply(Math, data.map(d => d.ptConfirmed));
         let lastDate;
         let lastBarRendered;
+        let dayVariation;
+        let dayVariationNum;
+        let dayVariationClass;
+        lastValue = 0;
+        lastButOneValue = 0;
         moment.locale('pt');
         $.each(data, function (i, d) {
             const date = moment(d.date, 'YYYYMMDD');
@@ -218,13 +234,28 @@ class C19 {
             const ismin = (ptConfirmed === self.minPT) ? 1 : 0;
             // dates
             const dateNumeric = {
-               full: date.format('YYYYMMDD'),
-               month: date.format('MM')
+                full: date.format('YYYYMMDD'),
+                month: date.format('MM')
+            };
+            lastButOneValue = lastValue;
+            lastValue = d.ptConfirmed;
+            dayVariation = dayVariationNum = self.getVariation(lastValue, lastButOneValue);
+            dayVariation = dayVariation.toFixed(2) + '%';
+            if (dayVariationNum > 0) {
+                dayVariation = '+' + dayVariation;
+                dayVariationClass = 'text-danger';
+            } else if (dayVariationNum < 0) {
+                dayVariationClass = 'text-success';
+            } else {
+                dayVariationClass = 'text-muted';
             }
+            // ------------------------------
             self.months.add(month);
             barContent = $('div#day-template').html();
             barContent = barContent.replace(/{{date}}/g, day);
             barContent = barContent.replace(/{{ptConfirmed}}/g, ptConfirmed);
+            barContent = barContent.replace(/{{dayVariation}}/g, dayVariation);
+            barContent = barContent.replace(/{{dayVariationClass}}/g, dayVariationClass);
             barContent = barContent.replace(/{{percentage}}/g, self.getPercentage(self.maxPT, ptConfirmed));
             barContent = barContent.replace(/{{ismax}}/g, ismax);
             barContent = barContent.replace(/{{ismin}}/g, ismin);

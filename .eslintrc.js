@@ -1,7 +1,8 @@
-/* module.exports = {
+module.exports = {
   env: {
     browser: true,
-    es6: true
+    es6: true,
+    jquery: true
   },
   extends: [
     'standard'
@@ -15,17 +16,7 @@
     sourceType: 'module'
   },
   rules: {
+    "semi"  : ["error", "always"],
+    "indent": ["error", 4],
   }
-} */
-
-module.exports = {
-  "extends": "standard",
-  "rules": {
-      "semi"  : ["error", "always"],
-      "indent": ["error", 4],
-  },
-  "env": {
-      "jquery": true,
-      "browser": true
-  },
-};
+}

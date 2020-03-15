@@ -71,3 +71,9 @@ h4 {
   right: 29px;
   font-size: 0.8rem;
 }
+
+.trending-percentage {
+  font-size: 0.7rem;
+  padding-top: 4px;
+  line-height: 7px;
+}
