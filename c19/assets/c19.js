@@ -238,7 +238,7 @@ class C19 {
                 month: date.format('MM')
             };
             lastButOneValue = lastValue;
-            lastValue = d.ptConfirmed;
+            lastValue += d.ptConfirmed;
             dayVariation = dayVariationNum = self.getVariation(lastValue, lastButOneValue);
             dayVariation = dayVariation.toFixed(2) + '%';
             if (dayVariationNum > 0) {
