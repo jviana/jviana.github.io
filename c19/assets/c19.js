@@ -240,7 +240,7 @@ class C19 {
             lastButOneValue = lastValue;
             lastValue += d.ptConfirmed;
             dayVariation = dayVariationNum = self.getVariation(lastValue, lastButOneValue);
-            dayVariation = dayVariation.toFixed(2) + '%';
+            dayVariation = dayVariation.toFixed(1) + '%';
             if (dayVariationNum > 0) {
                 dayVariation = '+' + dayVariation;
                 dayVariationClass = 'text-danger';
