@@ -27,6 +27,7 @@ class C19 {
             callback: this.drawChart,
             packages: ['line']
         });
+        this.valuesForChart1 = [];
     };
 
     animateNumericValue2 (elem, start, end, duration, decimalDigits, aditionalCharacter = '') {
@@ -235,12 +236,15 @@ class C19 {
             const day = date.format('D');
             const month = date.format('MMMM');
             const ptConfirmed = d.ptConfirmed;
+            const ptRecovered = d.ptRecovered;
+            const ptDeceased = d.ptDeceased;
             const ismax = (ptConfirmed === self.maxPT) ? 1 : 0;
             const ismin = (ptConfirmed === self.minPT) ? 1 : 0;
             // dates
             const dateNumeric = {
                 full: date.format('YYYYMMDD'),
-                month: date.format('MM')
+                month: date.format('MM'),
+                forChart1: date.format('DD.MM')
             };
             lastButOneValue = lastValue;
             lastValue += d.ptConfirmed;
@@ -254,6 +258,7 @@ class C19 {
             } else {
                 dayVariationClass = 'text-muted';
             }
+            self.valuesForChart1.push([dateNumeric.forChart1,ptConfirmed,ptRecovered,ptDeceased]);
             // ------------------------------
             self.months.add(month);
             barContent = $('div#day-template').html();
@@ -298,12 +303,12 @@ class C19 {
 
     drawChart () {
         var data = new google.visualization.DataTable();
-      data.addColumn('number', 'Day');
-      data.addColumn('number', 'Guardians of the Galaxy');
-      data.addColumn('number', 'The Avengers');
-      data.addColumn('number', 'Transformers: Age of Extinction');
+      data.addColumn('string', 'Dia');
+      data.addColumn('number', 'Confirmados');
+      data.addColumn('number', 'Recuperados');
+      data.addColumn('number', 'Óbitos');
 
-      data.addRows([
+      /* data.addRows([
         [1,  37.8, 80.8, 41.8],
         [2,  30.9, 69.5, 32.4],
         [3,  25.4,   57, 25.7],
@@ -318,13 +323,20 @@ class C19 {
         [12,  6.6,  8.4,  5.2],
         [13,  4.8,  6.3,  3.6],
         [14,  4.2,  6.2,  3.4]
-      ]);
+      ]); */
+// console.log(c19.valuesForChart1);
+      data.addRows(c19.valuesForChart1);
 
       var options = {
         chart: {
-          title: 'Box Office Earnings in First Two Weeks of Opening',
-          subtitle: 'in millions of dollars (USD)'
+          title: 'Evolução COVID-19 PT',
+          subtitle: 'Valores absolutos'
         },
+        axes: {
+          x: {
+            0: {side: 'bottom'}
+          }
+        },  
         width: '100%',
         height: 'auto'
       };

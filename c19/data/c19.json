@@ -89,15 +89,15 @@
         "ptConfirmed": 76,
         "ptRecovered": 1,
         "ptDeceased": 0
+      },
+      {
+        "date": "20200316",
+        "ptConfirmed": 86,
+        "ptRecovered": 0,
+        "ptDeceased": 0
       }
     ],
     "sources": {
-      "lastDescription1": "RTP",
-      "lastURL1": "https://www.rtp.pt/",
-      "lastDescription2": "SIC Notícias",
-      "lastURL2": "https://sicnoticias.pt/",
-      "lastDescription3": "Expresso",
-      "lastURL3": "https://expresso.pt/",
       "lastDescription": "DGS",
       "lastURL": "https://covid19.min-saude.pt/relatorio-de-situacao/"
     },
