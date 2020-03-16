@@ -77,3 +77,8 @@ h4 {
   padding-top: 4px;
   line-height: 7px;
 }
+
+.chart {
+  width: 100%; 
+  min-height: 250px;
+}

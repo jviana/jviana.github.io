@@ -25,8 +25,11 @@ class C19 {
         };
         google.charts.load('current', {
             callback: this.drawChart,
-            packages: ['line']
+            packages: ['corechart']
         });
+        /* google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart); */
+
         this.valuesForChart1 = [];
     };
 
@@ -244,7 +247,7 @@ class C19 {
             const dateNumeric = {
                 full: date.format('YYYYMMDD'),
                 month: date.format('MM'),
-                forChart1: date.format('DD.MM')
+                forChart1: date.format('DD.MMM')
             };
             lastButOneValue = lastValue;
             lastValue += d.ptConfirmed;
@@ -328,22 +331,17 @@ class C19 {
       data.addRows(c19.valuesForChart1);
 
       var options = {
-        chart: {
-          title: 'Evolução COVID-19 PT',
-          subtitle: 'Valores absolutos'
-        },
-        axes: {
-          x: {
-            0: {side: 'bottom'}
-          }
-        },  
-        width: '100%',
-        height: 'auto'
+        title: 'Evolução diária',
+        colors: ['#17a2b8', '#28a745', '#6c757d'],
+        legend: { position: 'bottom' },
+        backgroundColor: 'transparent',
       };
 
-      var chart = new google.charts.Line(document.getElementById('curve_chart'));
+      /* var chart = new google.charts.Line(document.getElementById('chart_absolute_daily_value'));
+      chart.draw(data, google.charts.Line.convertOptions(options)); */
+      var chart = new google.visualization.LineChart(document.getElementById('chart_absolute_daily_value'));
+        chart.draw(data, options);
 
-      // chart.draw(data, google.charts.Line.convertOptions(options));
     }
 }
 const c19 = new C19();
