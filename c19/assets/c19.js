@@ -29,8 +29,10 @@ class C19 {
         });
         /* google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart); */
-
         this.valuesForChart1 = [];
+        this.chartContainers = {
+            chart1: 'chart_absolute_daily_value'
+        };
     };
 
     animateNumericValue2 (elem, start, end, duration, decimalDigits, aditionalCharacter = '') {
@@ -177,6 +179,7 @@ class C19 {
         });
         // present day (animation)
         currentDayBar.addClass('progress-bar-striped progress-bar-animated');
+        $('#' + this.chartContainers.chart1).removeClass('d-none');
     }
 
     setFooter (source, lastDate) {
@@ -191,6 +194,7 @@ class C19 {
             $('div#main-content-months').find('button').slice(1).remove();
         }
         $('div#main-content-bars').find('div.row-day').slice(1).remove();
+        $('#' + this.chartContainers.chart1).addClass('d-none');
     }
 
     setMonths () {
@@ -261,7 +265,7 @@ class C19 {
             } else {
                 dayVariationClass = 'text-muted';
             }
-            self.valuesForChart1.push([dateNumeric.forChart1,ptConfirmed,ptRecovered,ptDeceased]);
+            self.valuesForChart1.push([dateNumeric.forChart1, ptConfirmed, ptRecovered, ptDeceased]);
             // ------------------------------
             self.months.add(month);
             barContent = $('div#day-template').html();
@@ -305,63 +309,58 @@ class C19 {
     }
 
     drawChart () {
-    var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Dia');
-      data.addColumn('number', 'Confirmados');
-      data.addColumn('number', 'Recuperados');
-      data.addColumn('number', 'Óbitos');
+        const data = new google.visualization.DataTable();
+        const chart = new google.visualization.LineChart(document.getElementById('chart_absolute_daily_value'));
 
-      data.addRows(c19.valuesForChart1);
+        data.addColumn('string', 'Dia');
+        data.addColumn('number', 'Confirmados');
+        data.addColumn('number', 'Recuperados');
+        data.addColumn('number', 'Óbitos');
+        data.addRows(c19.valuesForChart1);
 
-      var options = {
-        title: 'Evolução diária',
-        titleTextStyle: {
-            color: '#455564',
+        const options = {
+            title: 'Evolução diária',
+            titleTextStyle: {
+                color: '#455564',
                 fontSize: 14,
                 fontName: 'Open Sans Condensed',
                 bold: true,
                 italic: false
-        },
-        colors: ['#17a2b8', '#28a745', '#6c757d'],
-        legend: { 
-            position: 'bottom',
-            textStyle: {
-                color: '#6c7587',
-                fontSize: 12,
-                fontName: 'Open Sans Condensed',
-                bold: false,
-                italic: false
-              }
-        },
-        backgroundColor: 'transparent',
-        hAxis: {
-            textStyle: {
-              color: '#6c7587',
-              fontSize: 11,
-              fontName: 'Open Sans Condensed',
-              bold: false,
-              italic: false
+            },
+            colors: ['#17a2b8', '#28a745', '#6c757d'],
+            legend: {
+                position: 'bottom',
+                textStyle: {
+                    color: '#6c7587',
+                    fontSize: 12,
+                    fontName: 'Open Sans Condensed',
+                    bold: false,
+                    italic: false
+                }
+            },
+            backgroundColor: 'transparent',
+            hAxis: {
+                textStyle: {
+                    color: '#6c7587',
+                    fontSize: 11,
+                    fontName: 'Open Sans Condensed',
+                    bold: false,
+                    italic: false
+                }
+            },
+            vAxis: {
+                textStyle: {
+                    color: '#6c7587',
+                    fontSize: 11,
+                    fontName: 'Open Sans Condensed',
+                    bold: false,
+                    italic: false
+                }
             }
-          },
-          vAxis: {
-            textStyle: {
-              color: '#6c7587',
-              fontSize: 11,
-              fontName: 'Open Sans Condensed',
-              bold: false,
-              italic: false
-            }
-          }
-      };
+        };
 
-      /* var chart = new google.charts.Line(document.getElementById('chart_absolute_daily_value'));
-      chart.draw(data, google.charts.Line.convertOptions(options)); */
-      var chart = new google.visualization.LineChart(document.getElementById('chart_absolute_daily_value'));
         chart.draw(data, options);
-
     }
 }
 const c19 = new C19();
 c19.getData();
-
-
