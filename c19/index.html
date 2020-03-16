@@ -102,6 +102,9 @@
       </div>
 
       <div id="main-content-bars" class="col-lg-9 pt-2">
+
+        
+
         <div class="row mb-lg-4">
           <div class="col-1 small pt-1"><!-- Mês: --></div>
           <div id="main-content-months" class="col-11">
@@ -112,6 +115,9 @@
             </div>
           </div>
         </div>
+
+        
+
         <div id="day-template" class="d-none">
           <div class="row mt-1 row-day" data-date="{{datenum}}" data-month="{{monthnum}}">
             <div class="col-1 col-md-1 text-sm-right text-left day">
@@ -129,8 +135,25 @@
             </div>
           </div>
         </div>
+
+
+      </div>
+
+
+    </div>
+
+
+
+
+    <div class="row my-5">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-9">
+          <div id="curve_chart"></div>
       </div>
     </div>
+
+
+
     <nav class="navbar fixed-bottom navbar-light bg-light subtext small">
 
         <div class="col-6 text-dark text-left">Fonte <span class="text-muted">(dos valores absolutos)</span>: <span id="lastsource"></span></div>
@@ -140,6 +163,7 @@
   </div> 
 
   
+
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -152,15 +176,18 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
-
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 
   <script>
     const s = document.createElement('script');
-    s.src = './assets/c19.js?v=' + Math.floor(Math.random() * 1000);
+    s.type = 'module';
+    s.src = './assets/index.js?v=' + Math.floor(Math.random() * 1000);
     document.body.appendChild(s);
   </script>
+
+
 </body>
 
 </html>

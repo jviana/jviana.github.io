@@ -1,5 +1,5 @@
 /* global moment */
-class C19 {
+export class C19 {
     constructor () {
         this.totalPT = 0;
         this.totalDeceasedPT = 0;
@@ -278,7 +278,14 @@ class C19 {
         }
         this.setFooter(globalInfo.sources, lastDate);
         setTimeout(() => self.setLayoutTweaks(), 1000);
+        // this.initCharts();
     }
+
+    /* initCharts() {
+        const self = this;
+        google.charts.load('current', {'packages':['line']});
+        google.charts.setOnLoadCallback(self.drawChart());
+    } */
 
     getData () {
         const self = this;
@@ -289,6 +296,24 @@ class C19 {
             })
             .catch(error => console.error(error));
     }
+
+    /* drawChart () {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Sales', 'Expenses'],
+            ['2004',  1000,      400],
+            ['2005',  1170,      460],
+            ['2006',  660,       1120],
+            ['2007',  1030,      540]
+        ]);
+
+        var options = {
+            title: 'Company Performance',
+            curveType: 'function',
+            legend: { position: 'bottom' }
+        };
+
+        var chart = new google.charts.Line(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+    } */
 }
-const c19 = new C19();
-c19.getData();
