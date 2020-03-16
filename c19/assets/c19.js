@@ -1,5 +1,5 @@
 /* global moment */
-export class C19 {
+class C19 {
     constructor () {
         this.totalPT = 0;
         this.totalDeceasedPT = 0;
@@ -317,3 +317,5 @@ export class C19 {
         chart.draw(data, options);
     } */
 }
+const c19 = new C19();
+c19.getData();
