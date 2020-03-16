@@ -278,14 +278,8 @@ class C19 {
         }
         this.setFooter(globalInfo.sources, lastDate);
         setTimeout(() => self.setLayoutTweaks(), 1000);
-        // this.initCharts();
+        // this.drawChart();
     }
-
-    /* initCharts() {
-        const self = this;
-        google.charts.load('current', {'packages':['line']});
-        google.charts.setOnLoadCallback(self.drawChart());
-    } */
 
     getData () {
         const self = this;
@@ -298,7 +292,10 @@ class C19 {
     }
 
     /* drawChart () {
-        var data = google.visualization.arrayToDataTable([
+        google.charts.load('current', {'packages':['line']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        var data = this.google.visualization.arrayToDataTable([
             ['Year', 'Sales', 'Expenses'],
             ['2004',  1000,      400],
             ['2005',  1170,      460],
