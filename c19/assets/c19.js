@@ -132,8 +132,10 @@ class C19 {
         const lastBarRendered = $('div#main-content-bars').find('.progress-bar:last');
         const nBars = Object.keys(allBars).length - 2 - 1;
         const lastButOneBarRendered = allBars[nBars - 1];
-        const lastValue = lastBarRendered.attr('data-ptconfirmed');
-        const lastButOneValue = $(lastButOneBarRendered).attr('data-ptconfirmed');
+        const lastValue = parseInt(lastBarRendered.attr('data-ptconfirmed'));
+        const lastButOneValue = parseInt($(lastButOneBarRendered).attr('data-ptconfirmed'));
+        console.log(lastValue);
+        console.log(lastButOneValue);
         if (lastValue > lastButOneValue) {
             variationIcon = this.totalVariation.up;
             variationIconClass = 'text-danger';
