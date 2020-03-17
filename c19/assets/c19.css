@@ -82,3 +82,13 @@ h4 {
   width: 100%; 
   min-height: 250px;
 }
+
+/* .info-cards div.card {
+  cursor: pointer;
+  transition: height 0.3s, box-shadow 0.3s;
+  box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.5);
+}
+
+.info-cards div.card:hover, .info-cards div.card.info-card-active {
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.5);
+} */

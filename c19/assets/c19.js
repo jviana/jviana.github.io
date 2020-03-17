@@ -33,6 +33,7 @@ class C19 {
         this.chartContainers = {
             chart1: 'chart_absolute_daily_value'
         };
+        this.infoCardActive = 'confirmed';
     };
 
     animateNumericValue2 (elem, start, end, duration, decimalDigits, aditionalCharacter = '') {
@@ -253,8 +254,22 @@ class C19 {
                 month: date.format('MM'),
                 forChart1: date.format('DD.MMM')
             };
+            let valueActiveToBars;
+            // INFO TO DISPLAY IN BARS
+            switch (self.infoCardActive) {
+            case 'confirmed':
+                valueActiveToBars = ptConfirmed;
+                break;
+            case 'recovered':
+                valueActiveToBars = ptRecovered;
+                break;
+            case 'deceased':
+                valueActiveToBars = ptDeceased;
+                break;
+            }
+            // INFO TO DISPLAY IN BARS (end)
             lastButOneValue = lastValue;
-            lastValue += d.ptConfirmed;
+            lastValue += valueActiveToBars;
             dayVariation = dayVariationNum = self.getVariation(lastValue, lastButOneValue);
             dayVariation = dayVariation.toFixed(1) + '%';
             if (dayVariationNum > 0) {
@@ -270,10 +285,10 @@ class C19 {
             self.months.add(month);
             barContent = $('div#day-template').html();
             barContent = barContent.replace(/{{date}}/g, day);
-            barContent = barContent.replace(/{{ptConfirmed}}/g, ptConfirmed);
+            barContent = barContent.replace(/{{ptConfirmed}}/g, valueActiveToBars);
             barContent = barContent.replace(/{{dayVariation}}/g, dayVariation);
             barContent = barContent.replace(/{{dayVariationClass}}/g, dayVariationClass);
-            barContent = barContent.replace(/{{percentage}}/g, self.getPercentage(self.maxPT, ptConfirmed));
+            barContent = barContent.replace(/{{percentage}}/g, self.getPercentage(self.maxPT, valueActiveToBars));
             barContent = barContent.replace(/{{ismax}}/g, ismax);
             barContent = barContent.replace(/{{ismin}}/g, ismin);
             barContent = barContent.replace(/{{datenum}}/g, dateNumeric.full);
@@ -281,9 +296,9 @@ class C19 {
             $('div#main-content-bars').append(`${barContent}`);
             lastBarRendered = $('div#main-content-bars').find('.progress-bar:last');
             lastBarRendered.css('width', '0%');
-            lastBarRendered.css('width', self.getPercentage(self.maxPT, ptConfirmed) + '%');
+            lastBarRendered.css('width', self.getPercentage(self.maxPT, valueActiveToBars) + '%');
             // adjust text (ptConfirmed)
-            if (ptConfirmed === 0) {
+            if (valueActiveToBars === 0) {
                 lastBarRendered.addClass('text-dark');
             }
             // adjust text (ptConfirmed) --END
