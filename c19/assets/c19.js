@@ -33,6 +33,7 @@ class C19 {
         this.chartContainers = {
             chart1: 'chart_absolute_daily_value'
         };
+        this.chart1Rendered = false;
         this.infoCardActive = 'confirmed';
     };
 
@@ -333,11 +334,13 @@ class C19 {
             lastBarRendered.css('width', '0%');
             lastBarRendered.css('width', self.getPercentage(self.maxPT, valueActiveToBars) + '%');
             // adjust text (ptConfirmed)
-            if (valueActiveToBars <= 1) {
+            if (valueActiveToBars <= 2) {
                 lastBarRendered.addClass('text-dark');
             }
             if (valueActiveToBars === 1) {
-                lastBarRendered.addClass('pl-1');
+                lastBarRendered.addClass('pl-2');
+            } else if (valueActiveToBars === 2) {
+                lastBarRendered.addClass('pl-3');
             }
             // adjust text (ptConfirmed) --END
             lastDate = date;
@@ -349,11 +352,13 @@ class C19 {
         }
         this.setFooter(globalInfo.sources, lastDate);
         setTimeout(() => self.setLayoutTweaks(), 1000);
-        // this.drawChart();
-        google.charts.load('current', {
-            callback: this.drawChart,
-            packages: ['corechart']
-        });
+        if (!this.chart1Rendered) {
+            google.charts.load('current', {
+                callback: this.drawChart,
+                packages: ['corechart']
+            });
+            this.chart1Rendered = true;
+        }
     }
 
     setInfoCardsEvents () {
