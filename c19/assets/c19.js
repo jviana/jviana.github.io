@@ -118,7 +118,7 @@ class C19 {
         // $('#totalConfirmedDeceased').html(this.totalDeceasedPT);
         // $('#totalRecovered').html(this.totalRecoveredPT);
         // ANIMATED
-        const duration = 500;
+        const duration = 1000;
         this.animateNumericValue2('totalConfirmed', 0, this.totalPT, duration, 0);
         this.animateNumericValue2('totalRecovered', 0, this.totalRecoveredPT, duration, 0);
         this.animateNumericValue2('totalDeceased', 0, this.totalDeceasedPT, duration, 0);
