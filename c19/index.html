@@ -55,7 +55,7 @@
           <div class="col-12">
             <div class="row">
               <div class="col-4 col-lg-6">
-                <div class="card text-info info-card-active">
+                <div class="card text-info info-card-active" data-type="confirmed">
                   <div class="card-body p-1">
                     <h4 class="card-title">
                       Confirmados
@@ -71,7 +71,7 @@
               </div>
 
               <div class="col-4 col-lg-6">
-                <div class="card text-success">
+                <div class="card text-success" data-type="recovered">
                   <div class="card-body p-1">
                     <h4 class="card-title">
                       Recuperados
@@ -84,7 +84,7 @@
               </div>
 
               <div class="col-4 col-lg-6 mt-lg-4">
-                <div class="card text-secondary">
+                <div class="card text-secondary" data-type="deceased">
                   <div class="card-body p-1">
                     <h4 class="card-title">
                       <div class="bg-dark" style="margin: 4px -4px 4px -4px; height: 13px;"></div>
@@ -125,7 +125,7 @@
             </div>
             <div class="col-9 col-md-10">
               <div class="progress">
-                <div class="progress-bar bg-info bars" data-ptconfirmed="{{ptConfirmed}}" data-ismax="{{ismax}}" data-ismin="{{ismin}}" role="progressbar" aria-valuenow="{{percentage}}%" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar {{cssBar}} bars" data-cases="{{cases}}" data-ptconfirmed="{{ptConfirmed}}" data-ismax="{{ismax}}" data-ismin="{{ismin}}" role="progressbar" aria-valuenow="{{percentage}}%" aria-valuemin="0" aria-valuemax="100">
                   {{ptConfirmed}}
                 </div>
               </div>

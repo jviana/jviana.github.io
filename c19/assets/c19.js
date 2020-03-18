@@ -90,8 +90,6 @@ class C19 {
             timer = setInterval(function () {
                 if (decimalDigits > 0) {
                     current = current + increment;
-                    /* console.log(current);
-                    current = current.toFixed(2); */
                     obj.html(current.toFixed(2) + '%');
                     if (current.toFixed(2) === end) {
                         clearInterval(timer);
@@ -132,10 +130,8 @@ class C19 {
         const lastBarRendered = $('div#main-content-bars').find('.progress-bar:last');
         const nBars = Object.keys(allBars).length - 2 - 1;
         const lastButOneBarRendered = allBars[nBars - 1];
-        const lastValue = parseInt(lastBarRendered.attr('data-ptconfirmed'));
-        const lastButOneValue = parseInt($(lastButOneBarRendered).attr('data-ptconfirmed'));
-        console.log(lastValue);
-        console.log(lastButOneValue);
+        const lastValue = parseInt(lastBarRendered.attr('data-cases'));
+        const lastButOneValue = parseInt($(lastButOneBarRendered).attr('data-cases'));
         if (lastValue > lastButOneValue) {
             variationIcon = this.totalVariation.up;
             variationIconClass = 'text-danger';
@@ -172,14 +168,16 @@ class C19 {
         const barsmax = $('div#main-content-bars').find('div.progress-bar[data-ismax="1"]');
         const barsmin = $('div#main-content-bars').find('div.progress-bar[data-ismin="1"]');
         const currentDayBar = $('div#main-content-bars').find('div.row-day[data-date="' + todayDateNumeric + '"]').find('div.progress-bar');
-        $.each(barsmax, function (i, bar) {
-            $(bar).removeClass('bg-info').addClass('bg-danger');
-            $(bar).parent().parent().prev().addClass('text-danger');
-        });
-        $.each(barsmin, function (i, bar) {
-            $(bar).removeClass('bg-info').addClass('bg-success');
-            $(bar).parent().parent().prev().addClass('text-success');
-        });
+        if (this.infoCardActive === 'confirmed') {
+            $.each(barsmax, function (i, bar) {
+                $(bar).removeClass('bg-info').addClass('bg-danger');
+                $(bar).parent().parent().prev().addClass('text-danger');
+            });
+            $.each(barsmin, function (i, bar) {
+                $(bar).removeClass('bg-info').addClass('bg-success');
+                $(bar).parent().parent().prev().addClass('text-success');
+            });
+        }
         // present day (animation)
         currentDayBar.addClass('progress-bar-striped progress-bar-animated');
         $('#' + this.chartContainers.chart1).removeClass('d-none');
@@ -193,11 +191,21 @@ class C19 {
     }
 
     resetInfo () {
+        const self = this;
+        const infoCards = $('.info-cards div.card');
         if (!this.flags.monthsRendered) {
             $('div#main-content-months').find('button').slice(1).remove();
         }
         $('div#main-content-bars').find('div.row-day').slice(1).remove();
         $('#' + this.chartContainers.chart1).addClass('d-none');
+        // reset info cards
+        $.each(infoCards, function (i, card) {
+            card = $(card);
+            card.removeClass('info-card-active');
+            if (card.attr('data-type') === self.infoCardActive) {
+                card.addClass('info-card-active');
+            }
+        });
     }
 
     setMonths () {
@@ -257,16 +265,20 @@ class C19 {
                 forChart1: date.format('DD.MMM')
             };
             let valueActiveToBars;
+            let cssBar;
             // INFO TO DISPLAY IN BARS
             switch (self.infoCardActive) {
             case 'confirmed':
                 valueActiveToBars = ptConfirmed;
+                cssBar = 'bg-info';
                 break;
             case 'recovered':
                 valueActiveToBars = ptRecovered;
+                cssBar = 'bg-success';
                 break;
             case 'deceased':
                 valueActiveToBars = ptDeceased;
+                cssBar = 'bg-secondary';
                 break;
             }
             // INFO TO DISPLAY IN BARS (end)
@@ -282,11 +294,29 @@ class C19 {
             } else {
                 dayVariationClass = 'text-muted';
             }
+            // adjust css to view
+            if (self.infoCardActive === 'recovered') {
+                if (dayVariationNum > 0) {
+                    dayVariationClass = 'text-success';
+                } else {
+                    dayVariationClass = 'text-muted';
+                }
+            }
+            if (self.infoCardActive === 'deceased') {
+                if (dayVariationNum > 0) {
+                    dayVariationClass = 'text-secondary';
+                } else {
+                    dayVariationClass = 'text-muted';
+                }
+            }
+            // adjust css to view (end)
             self.valuesForChart1.push([dateNumeric.forChart1, ptConfirmed, ptRecovered, ptDeceased]);
             // ------------------------------
             self.months.add(month);
             barContent = $('div#day-template').html();
             barContent = barContent.replace(/{{date}}/g, day);
+            barContent = barContent.replace(/{{cssBar}}/g, cssBar);
+            barContent = barContent.replace(/{{cases}}/g, ptConfirmed);
             barContent = barContent.replace(/{{ptConfirmed}}/g, valueActiveToBars);
             barContent = barContent.replace(/{{dayVariation}}/g, dayVariation);
             barContent = barContent.replace(/{{dayVariationClass}}/g, dayVariationClass);
@@ -307,12 +337,25 @@ class C19 {
             lastDate = date;
         });
         this.displayTotalConfirmed();
+        this.setInfoCardsEvents();
         if (!this.flags.monthsRendered) {
             this.setMonths();
         }
         this.setFooter(globalInfo.sources, lastDate);
         setTimeout(() => self.setLayoutTweaks(), 1000);
         // this.drawChart();
+    }
+
+    setInfoCardsEvents () {
+        const self = this;
+        const infoCards = $('.info-cards div.card');
+        infoCards.unbind('click');
+        infoCards.click(function (event) {
+            self.infoCardActive = $(this).attr('data-type');
+            event.preventDefault();
+            self.resetInfo();
+            self.getData();
+        });
     }
 
     getData () {
