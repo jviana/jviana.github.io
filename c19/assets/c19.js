@@ -346,7 +346,7 @@ class C19 {
         }
         this.setFooter(globalInfo.sources, lastDate);
         setTimeout(() => self.setLayoutTweaks(), 1000);
-        // this.drawChart();
+        this.drawChart();
     }
 
     setInfoCardsEvents () {
