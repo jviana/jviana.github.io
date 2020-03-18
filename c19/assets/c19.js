@@ -248,6 +248,9 @@ class C19 {
         let dayVariationClass;
         lastValue = 0;
         lastButOneValue = 0;
+        // Reset info for charts
+        this.valuesForChart1 = [];
+        // Reset info for charts (end)
         moment.locale('pt');
         $.each(data, function (i, d) {
             const date = moment(d.date, 'YYYYMMDD');
@@ -346,7 +349,11 @@ class C19 {
         }
         this.setFooter(globalInfo.sources, lastDate);
         setTimeout(() => self.setLayoutTweaks(), 1000);
-        this.drawChart();
+        // this.drawChart();
+        google.charts.load('current', {
+            callback: this.drawChart,
+            packages: ['corechart']
+        });
     }
 
     setInfoCardsEvents () {
@@ -380,7 +387,7 @@ class C19 {
         data.addColumn('number', 'Recuperados');
         data.addColumn('number', 'Óbitos');
         data.addRows(c19.valuesForChart1);
-
+        console.log(c19.valuesForChart1);
         const options = {
             title: 'Evolução diária',
             titleTextStyle: {
@@ -390,6 +397,7 @@ class C19 {
                 bold: true,
                 italic: false
             },
+            width: '100%',
             colors: ['#17a2b8', '#28a745', '#6c757d'],
             legend: {
                 position: 'bottom',
