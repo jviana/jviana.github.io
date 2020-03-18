@@ -34,6 +34,7 @@ class C19 {
             chart1: 'chart_absolute_daily_value'
         };
         this.chart1Rendered = false;
+        this.displayTotalRendered = false;
         this.infoCardActive = 'confirmed';
     };
 
@@ -345,7 +346,10 @@ class C19 {
             // adjust text (ptConfirmed) --END
             lastDate = date;
         });
-        this.displayTotalConfirmed();
+        if (!this.displayTotalRendered) {
+            this.displayTotalConfirmed();
+            this.displayTotalRendered = true;
+        }
         this.setInfoCardsEvents();
         if (!this.flags.monthsRendered) {
             this.setMonths();
