@@ -23,12 +23,12 @@ class C19 {
             down: 'trending_down',
             equal: '='
         };
-        google.charts.load('current', {
+        /* google.charts.load('current', {
             callback: this.drawChart,
             packages: ['corechart']
-        });
+        }); */
         /* google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart); */
+        google.charts.setOnLoadCallback(drawChart); */
         this.valuesForChart1 = [];
         this.chartContainers = {
             chart1: 'chart_absolute_daily_value'
@@ -379,15 +379,14 @@ class C19 {
     }
 
     drawChart () {
+        $('chart_absolute_daily_value').html('');
         const data = new google.visualization.DataTable();
         const chart = new google.visualization.LineChart(document.getElementById('chart_absolute_daily_value'));
-
         data.addColumn('string', 'Dia');
         data.addColumn('number', 'Confirmados');
         data.addColumn('number', 'Recuperados');
         data.addColumn('number', 'Óbitos');
         data.addRows(c19.valuesForChart1);
-        console.log(c19.valuesForChart1);
         const options = {
             title: 'Evolução diária',
             titleTextStyle: {
