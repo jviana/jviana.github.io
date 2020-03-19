@@ -338,11 +338,13 @@ class C19 {
             if (valueActiveToBars <= 2) {
                 lastBarRendered.addClass('text-dark');
             }
-            /* if (valueActiveToBars === 1) {
-                lastBarRendered.addClass('pl-2');
+            if (valueActiveToBars === 1) {
+                // lastBarRendered.addClass('pl-2');
+                lastBarRendered.html(('&nbsp;').repeat(1) + lastBarRendered.html());
             } else if (valueActiveToBars === 2) {
-                lastBarRendered.addClass('pl-3');
-            } */
+                // lastBarRendered.addClass('pl-3');
+                lastBarRendered.html(('&nbsp;').repeat(2) + lastBarRendered.html());
+            }
             // adjust text (ptConfirmed) --END
             lastDate = date;
         });
