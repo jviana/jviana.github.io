@@ -453,6 +453,11 @@ class C19 {
                     bold: false,
                     italic: false
                 }
+            },
+            animation: {
+                startup: true,
+                duration: 1000,
+                easing: 'out'
             }
         };
 
