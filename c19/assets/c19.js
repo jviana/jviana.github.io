@@ -30,6 +30,7 @@ class C19 {
         /* google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart); */
         this.valuesForChart1 = [];
+        this.valuesForChartByAge = [];
         this.chartContainers = {
             chart1: 'chart_absolute_daily_value'
         };
@@ -365,6 +366,11 @@ class C19 {
             });
             this.chart1Rendered = true;
         }
+        this.setAgeChart(globalInfo.agedescription);
+    }
+
+    setAgeChart (data) {
+        console.log(data);
     }
 
     setInfoCardsEvents () {
