@@ -370,7 +370,17 @@ class C19 {
     }
 
     setAgeChart (data) {
-        console.log(data);
+        const self = this;
+        let maleAndFemale;
+        this.valuesForChartByAge.push(['Grupo etário', 'Número de casos']);
+        for (const [key, value] of Object.entries(data)) {
+            maleAndFemale = value.male + value.female;
+            self.valuesForChartByAge.push([key + ' anos', maleAndFemale]);
+        }
+        google.charts.load('current', {
+            callback: this.drawAgeChart,
+            packages: ['corechart']
+        });
     }
 
     setInfoCardsEvents () {
@@ -446,6 +456,54 @@ class C19 {
             }
         };
 
+        chart.draw(data, options);
+    }
+
+    drawAgeChart () {
+        $('age-chart').html('');
+        const data = google.visualization.arrayToDataTable(c19.valuesForChartByAge);
+        const chart = new google.visualization.PieChart(document.getElementById('age-chart'));
+        const options = {
+            title: 'Caracterização dos casos confirmados',
+            is3D: true,
+            titleTextStyle: {
+                color: '#455564',
+                fontSize: 14,
+                fontName: 'Open Sans Condensed',
+                bold: true,
+                italic: false
+            },
+            width: '100%',
+            legend: {
+                position: 'right',
+                textStyle: {
+                    color: '#6c7587',
+                    fontSize: 11,
+                    fontName: 'Open Sans Condensed',
+                    bold: false,
+                    italic: false
+                }
+            },
+            backgroundColor: 'transparent',
+            hAxis: {
+                textStyle: {
+                    color: '#6c7587',
+                    fontSize: 11,
+                    fontName: 'Open Sans Condensed',
+                    bold: false,
+                    italic: false
+                }
+            },
+            vAxis: {
+                textStyle: {
+                    color: '#6c7587',
+                    fontSize: 11,
+                    fontName: 'Open Sans Condensed',
+                    bold: false,
+                    italic: false
+                }
+            }
+        };
         chart.draw(data, options);
     }
 }
