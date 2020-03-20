@@ -366,7 +366,7 @@ class C19 {
             });
             this.chart1Rendered = true;
         }
-        this.setAgeChart(globalInfo.agedescription);
+        // this.setAgeChart(globalInfo.agedescription);
     }
 
     setAgeChart (data) {
