@@ -418,6 +418,9 @@ class C19 {
             });
             self.setAgeChart(false);
         });
+        $('#age-chart').click(function ($event) {
+            $('html, body').animate({ scrollTop: $('#footer').offset().top }, 1000);
+        });
     }
 
     getData () {
