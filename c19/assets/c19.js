@@ -17,6 +17,9 @@ class C19 {
         this.flags = {
             monthsRendered: false
         };
+        this.dataActive = {
+            ageChart: 'male'
+        };
         this.dataURL = 'https://jviana.github.io/c19/data/c19.json?v=' + Math.floor(Math.random() * (1000 - 1 + 1) + 1);
         this.totalVariation = {
             up: 'trending_up',
@@ -32,11 +35,13 @@ class C19 {
         this.valuesForChart1 = [];
         this.valuesForChartByAge = [];
         this.chartContainers = {
-            chart1: 'chart_absolute_daily_value'
+            chart1: 'chart_absolute_daily_value',
+            chartAge: 'container-chartAge'
         };
         this.chart1Rendered = false;
         this.displayTotalRendered = false;
         this.infoCardActive = 'confirmed';
+        this.agedescription = null;
     };
 
     animateNumericValue2 (elem, start, end, duration, decimalDigits, aditionalCharacter = '') {
@@ -184,6 +189,7 @@ class C19 {
         // present day (animation)
         currentDayBar.addClass('progress-bar-striped progress-bar-animated');
         $('#' + this.chartContainers.chart1).removeClass('d-none');
+        $('#' + this.chartContainers.chartAge).removeClass('d-none');
     }
 
     setFooter (source, lastDate) {
@@ -201,6 +207,7 @@ class C19 {
         }
         $('div#main-content-bars').find('div.row-day').slice(1).remove();
         $('#' + this.chartContainers.chart1).addClass('d-none');
+        $('#' + this.chartContainers.chartAge).addClass('d-none');
         // reset info cards
         $.each(infoCards, function (i, card) {
             card = $(card);
@@ -336,15 +343,11 @@ class C19 {
             lastBarRendered.css('width', '0%');
             lastBarRendered.css('width', self.getPercentage(self.maxPT, valueActiveToBars) + '%');
             // adjust text (ptConfirmed)
-            if (valueActiveToBars <= 2) {
+            if (valueActiveToBars <= 4) {
                 lastBarRendered.addClass('text-dark');
             }
-            if (valueActiveToBars === 1) {
-                // lastBarRendered.addClass('pl-2');
-                lastBarRendered.html(('&nbsp;').repeat(1) + lastBarRendered.html());
-            } else if (valueActiveToBars === 2) {
-                // lastBarRendered.addClass('pl-3');
-                lastBarRendered.html(('&nbsp;').repeat(2) + lastBarRendered.html());
+            if (valueActiveToBars <= 4) {
+                lastBarRendered.html(('&nbsp;').repeat(3) + lastBarRendered.html());
             }
             // adjust text (ptConfirmed) --END
             lastDate = date;
@@ -364,34 +367,55 @@ class C19 {
                 callback: this.drawChart,
                 packages: ['corechart']
             });
+            this.agedescription = globalInfo.agedescription;
+            this.setAgeChart(true);
             this.chart1Rendered = true;
         }
-        // this.setAgeChart(globalInfo.agedescription);
     }
 
-    setAgeChart (data) {
+    setAgeChart (initializeChart) {
         const self = this;
-        let maleAndFemale;
+        const data = this.agedescription;
+        let chartValue;
         this.valuesForChartByAge.push(['Grupo etário', 'Número de casos']);
         for (const [key, value] of Object.entries(data)) {
-            maleAndFemale = value.male + value.female;
-            self.valuesForChartByAge.push([key + ' anos', maleAndFemale]);
+            chartValue = value[self.dataActive.ageChart];
+            self.valuesForChartByAge.push([key + ' anos', chartValue]);
         }
-        google.charts.load('current', {
-            callback: this.drawAgeChart,
-            packages: ['corechart']
-        });
+        if (initializeChart) {
+            google.charts.load('current', {
+                callback: this.drawAgeChart,
+                packages: ['corechart']
+            });
+        } else {
+            this.drawAgeChart();
+        }
     }
 
     setInfoCardsEvents () {
         const self = this;
         const infoCards = $('.info-cards div.card');
+        const btnmalefemale = $('.btn-malefemale');
         infoCards.unbind('click');
         infoCards.click(function (event) {
             self.infoCardActive = $(this).attr('data-type');
             event.preventDefault();
             self.resetInfo();
             self.getData();
+        });
+        btnmalefemale.unbind('click');
+        btnmalefemale.click(function (event) {
+            event.preventDefault();
+            self.valuesForChartByAge = [];
+            self.dataActive.ageChart = $(this).attr('data-type');
+            $.each(btnmalefemale, function (i, btn) {
+                btn = $(btn);
+                btn.removeClass('btn-malefemale-active');
+                if (btn.attr('data-type') === self.dataActive.ageChart) {
+                    btn.addClass('btn-malefemale-active');
+                }
+            });
+            self.setAgeChart(false);
         });
     }
 
@@ -465,7 +489,7 @@ class C19 {
     }
 
     drawAgeChart () {
-        $('age-chart').html('');
+        // $('age-chart').html('');
         const data = google.visualization.arrayToDataTable(c19.valuesForChartByAge);
         const chart = new google.visualization.PieChart(document.getElementById('age-chart'));
         const options = {
@@ -507,6 +531,10 @@ class C19 {
                     bold: false,
                     italic: false
                 }
+            },
+            animation: {
+                duration: 1000,
+                easing: 'out'
             }
         };
         chart.draw(data, options);
