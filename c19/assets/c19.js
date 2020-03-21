@@ -406,6 +406,7 @@ class C19 {
         btnmalefemale.unbind('click');
         btnmalefemale.click(function ($event) {
             $event.preventDefault();
+            $event.stopPropagation();
             self.valuesForChartByAge = [];
             self.dataActive.ageChart = $(this).attr('data-type');
             $.each(btnmalefemale, function (i, btn) {
