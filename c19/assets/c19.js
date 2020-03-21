@@ -542,6 +542,7 @@ class C19 {
             }
         };
         chart.draw(data, options);
+        $('#container-btn-malefemale').removeClass('d-none');
     }
 }
 const c19 = new C19();
