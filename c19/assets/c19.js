@@ -406,8 +406,7 @@ class C19 {
         btnmalefemale.unbind('click');
         btnmalefemale.click(function ($event) {
             $event.preventDefault();
-            $event.stopPropagation();
-            $(this).css('overflow', 'hidden');
+            $('html, body').animate({ scrollTop: $('#footer').offset().top }, 1000);
             self.valuesForChartByAge = [];
             self.dataActive.ageChart = $(this).attr('data-type');
             $.each(btnmalefemale, function (i, btn) {
@@ -418,11 +417,7 @@ class C19 {
                 }
             });
             self.setAgeChart(false);
-            return false;
         });
-        btnmalefemale.ontouchend = (e) => {
-            e.preventDefault();
-        };
     }
 
     getData () {
