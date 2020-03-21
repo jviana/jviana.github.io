@@ -416,6 +416,7 @@ class C19 {
                 }
             });
             self.setAgeChart(false);
+            return false;
         });
     }
 
