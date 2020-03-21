@@ -418,6 +418,9 @@ class C19 {
             self.setAgeChart(false);
             return false;
         });
+        btnmalefemale.ontouchend = (e) => {
+            e.preventDefault();
+        };
     }
 
     getData () {
