@@ -10,6 +10,9 @@ class C19 {
             totalDeceasedPT: 0,
             totalRecoveredPT: 0
         };
+        this.container = {
+            mainContainers: ['.info-cards', '#main-content-bars', '#container-chartAge', '#container-chartDaily']
+        };
         this.maxPT = 0;
         this.minPT = 0;
         // Create Set
@@ -423,20 +426,63 @@ class C19 {
         });
     }
 
-    async fadeContainer (container, time) {
-        container.fadeOut(time);
+    async fadeContainer (container, time, show) {
+        if (show) {
+            container.fadeIn(time);
+        } else {
+            container.fadeOut(time);
+        }
+    }
+
+    drawPeople () {
+        // self = this;
+        const icon = '<span class="material-icons p-0 m-0 material-charts-icons text-info">face</span>';
+        const icon2 = '<span class="material-icons p-0 m-0 material-charts-icons text-success">face</span>';
+        const icon3 = '<span class="material-icons p-0 m-0 material-charts-icons text-secondary">face</span>';
+        const container = $('#people');
+        container.html('');
+        for (let i = 0; i < this.totalPT; i++) {
+            container.append(icon);
+        }
+        for (let i = 0; i < this.totalRecoveredPT; i++) {
+            container.append(icon2);
+        }
+        for (let i = 0; i < this.totalDeceasedPT; i++) {
+            container.append(icon3);
+        }
+        /* for (let i = 0; i < this.totalPT; i++) {
+            setTimeout(() => container.append(icon), 1 * i);
+        }
+        for (let i = 0; i < this.totalRecoveredPT; i++) {
+            setTimeout(() => container.append(icon2), 1 * i);
+        }
+        for (let i = 0; i < this.totalDeceasedPT; i++) {
+            setTimeout(() => container.append(icon3), 1 * i);
+        } */
     }
 
     setEnterEvents () {
-        const mainContainers = ['.info-cards', '#main-content-bars', '#container-chartAge', '#container-chartDaily'];
+        const mainContainers = this.container.mainContainers;
         const self = this;
         $('.btn-show-people').unbind('click');
         $('.btn-show-people').click(async function (event) {
             event.preventDefault();
+            $('.btn-show-people').addClass('d-none');
             for (const item of mainContainers) {
-                await self.fadeContainer($(item), 0);
+                await self.fadeContainer($(item), 0, false);
             }
             $('#container-drawPeople').fadeIn(700);
+            $('.btn-hide-people').removeClass('d-none');
+            self.drawPeople();
+        });
+        $('.btn-hide-people').click(async function (event) {
+            event.preventDefault();
+            $('#container-drawPeople').hide();
+            $('.btn-hide-people').addClass('d-none');
+            for (const item of mainContainers) {
+                await self.fadeContainer($(item), 500, true);
+            }
+            $('.btn-show-people').removeClass('d-none');
         });
     }
 

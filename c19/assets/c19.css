@@ -112,6 +112,17 @@ h4 {
   border-radius: 1.5rem;
 }
 
+/* avoid word wrapping in counters */
+@media (max-width: 389px) {
+  p.card-text {
+    font-size: 3rem;
+  }
+}
+
+
+.material-charts-icons {
+  font-size: 10px;
+}
 /* Rules for sizing the icon. */
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
