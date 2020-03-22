@@ -139,46 +139,46 @@
     },
     "agedescription": {
       "0-9": {
-        "male": 4,
-        "female": 14
+        "male": 6,
+        "female": 17
       },
       "10-19": {
-        "male": 22,
-        "female": 27
+        "male": 26,
+        "female": 31
       },
       "20-29": {
-        "male": 68,
-        "female": 89
+        "male": 82,
+        "female": 105
       },
       "30-39": {
-        "male": 116,
-        "female": 118
+        "male": 140,
+        "female": 148
       },
       "40-49": {
-        "male": 109,
-        "female": 133
+        "male": 141,
+        "female": 173
       },
       "50-59": {
-        "male": 101,
-        "female": 113
+        "male": 128,
+        "female": 154
       },
       "60-69": {
-        "male": 105,
-        "female": 75
+        "male": 122,
+        "female": 91
       },
       "70-79": {
-        "male": 71,
-        "female": 42
+        "male": 90,
+        "female": 51
       },
       "80+": {
-        "male": 35,
-        "female": 38
+        "male": 44,
+        "female": 51
       }
     },
     "info": {
       "subject": "Covid-19 PT",
       "author": "JV",
       "page": 1,
-      "version": "0.1"
+      "version": "0.3"
     }
   }
