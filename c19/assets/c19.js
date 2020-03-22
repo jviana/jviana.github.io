@@ -423,8 +423,26 @@ class C19 {
         });
     }
 
+    async fadeContainer (container, time) {
+        container.fadeOut(time);
+    }
+
+    setEnterEvents () {
+        const mainContainers = ['.info-cards', '#main-content-bars', '#container-chartAge', '#container-chartDaily'];
+        const self = this;
+        $('.btn-show-people').unbind('click');
+        $('.btn-show-people').click(async function (event) {
+            event.preventDefault();
+            for (const item of mainContainers) {
+                await self.fadeContainer($(item), 0);
+            }
+            $('#container-drawPeople').fadeIn(700);
+        });
+    }
+
     getData () {
         const self = this;
+        this.setEnterEvents();
         fetch(this.dataURL)
             .then(response => response.json())
             .then(data => {

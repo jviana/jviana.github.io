@@ -30,17 +30,24 @@
 </head>
 
 <body>
-  <div class="container mt-2">
+  <div class="container mt-2" id="pg-1">
     <div class="row">
 
       <div class="col-lg-3">
         <div class="row">
-          <div class="col-12">
+          <div class="col-8">
             <h1>COVID-19</h1>
             <div>
               <div class="flag-icon flag-icon-pt float-left m-0 p-0 mr-2 ml-1" style="height: 15px; width: 20px;"></div>
               <div class="subtext small">Portugal</div>
             </div>
+          </div>
+          <div class="col-4 text-right">
+            <!-- <div class="mt-2">
+              <button type="button" class="btn btn-outline-info btn-app btn-show-people">
+                <span class="material-icons pt-1">face</span>
+              </button>
+            </div> -->
           </div>
           <!-- <div class="col-12">
             <div class="collapse rounded" id="navbarC19PT">
@@ -110,6 +117,14 @@
         </div>
       </div>
 
+      <div class="col-lg-9 pt-2" id="container-drawPeople" style="display: none;">
+        <div class="row">
+          <div class="col-12">
+            123
+          </div>
+        </div>
+      </div>
+
       <div id="main-content-bars" class="col-lg-9 pt-2">
 
         
@@ -151,7 +166,7 @@
 
     </div>
 
-    <div class="row mt-4 mb-5">
+    <div class="row mt-4 mb-5" id="container-chartDaily">
       <div class="col-lg-3"></div>
       <div class="col-lg-9 m-0 p-0">
           <div id="chart_absolute_daily_value" class="chart m-0 p-0" style="width: 100%;"></div>
