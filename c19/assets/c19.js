@@ -380,7 +380,7 @@ class C19 {
         this.valuesForChartByAge.push(['Grupo etário', 'Número de casos']);
         for (const [key, value] of Object.entries(data)) {
             chartValue = value[self.dataActive.ageChart];
-            self.valuesForChartByAge.push([key + ' anos', chartValue]);
+            self.valuesForChartByAge.push([key + ' anos: ' + chartValue, chartValue]);
         }
         if (initializeChart) {
             google.charts.load('current', {
