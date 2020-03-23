@@ -477,17 +477,17 @@ class C19 {
     requestAnimationFrame(step); */
 
     drawPeople () {
-        self = this;
+        const self = this;
         const icon = '<span class="material-icons p-0 m-0 material-charts-icons text-info" style="opacity: 0.0">face</span>';
         const icon2 = '<span class="material-icons p-0 m-0 material-charts-icons text-success" style="opacity: 0.0">face</span>';
         const icon3 = '<span class="material-icons p-0 m-0 material-charts-icons text-secondary" style="opacity: 0.0">face</span>';
         const container = $('#people');
         container.html('');
-        for (let i = 0; i < this.totalPT; i++) {
-            container.append(icon);
-        }
         for (let i = 0; i < this.totalRecoveredPT; i++) {
             container.append(icon2);
+        }
+        for (let i = 0; i < this.totalPT; i++) {
+            container.append(icon);
         }
         for (let i = 0; i < this.totalDeceasedPT; i++) {
             container.append(icon3);
