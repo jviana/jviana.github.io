@@ -434,11 +434,53 @@ class C19 {
         }
     }
 
+    fadeIn (element) {
+        var opacity = 0;
+        const increase = _ => {
+            opacity += 0.05;
+            if (opacity >= 1) {
+                // complete
+                element.style.opacity = 1;
+                return true;
+            }
+            element.style.opacity = opacity;
+            requestAnimationFrame(increase);
+        };
+        requestAnimationFrame(increase);
+    }
+
+    /* const step = ts => {
+        if (!start) {
+            start = ts;
+        }
+        const progress = (ts - start) / duration;
+        let intermediateValue;
+        if (decimalDigits === 0) {
+            intermediateValue = Math.floor(progress * end);
+            if (intermediateValue <= end) {
+                obj.html(intermediateValue + aditionalCharacter);
+            } else {
+                obj.html(end);
+            }
+        } else {
+            intermediateValue = progress * end;
+            if (intermediateValue <= end) {
+                obj.html(intermediateValue.toFixed(2) + aditionalCharacter);
+            } else {
+                obj.html(end.toFixed(2) + aditionalCharacter);
+            }
+        }
+        if (progress < 1) {
+            requestAnimationFrame(step);
+        }
+    };
+    requestAnimationFrame(step); */
+
     drawPeople () {
-        // self = this;
-        const icon = '<span class="material-icons p-0 m-0 material-charts-icons text-info">face</span>';
-        const icon2 = '<span class="material-icons p-0 m-0 material-charts-icons text-success">face</span>';
-        const icon3 = '<span class="material-icons p-0 m-0 material-charts-icons text-secondary">face</span>';
+        self = this;
+        const icon = '<span class="material-icons p-0 m-0 material-charts-icons text-info" style="opacity: 0.0">face</span>';
+        const icon2 = '<span class="material-icons p-0 m-0 material-charts-icons text-success" style="opacity: 0.0">face</span>';
+        const icon3 = '<span class="material-icons p-0 m-0 material-charts-icons text-secondary" style="opacity: 0.0">face</span>';
         const container = $('#people');
         container.html('');
         for (let i = 0; i < this.totalPT; i++) {
@@ -450,6 +492,10 @@ class C19 {
         for (let i = 0; i < this.totalDeceasedPT; i++) {
             container.append(icon3);
         }
+        const peopleFace = container.find('.material-icons');
+        $.each(peopleFace, function (i, face) {
+            setTimeout(() => self.fadeIn(face), 1 * i);
+        });
         /* for (let i = 0; i < this.totalPT; i++) {
             setTimeout(() => container.append(icon), 1 * i);
         }
