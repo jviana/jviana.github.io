@@ -143,6 +143,12 @@
         "ptConfirmed": 302,
         "ptRecovered": 8,
         "ptDeceased": 10
+      },
+      {
+        "date": "20200325",
+        "ptConfirmed": 633,
+        "ptRecovered": 0,
+        "ptDeceased": 10
       }
     ],
     "sources": {
