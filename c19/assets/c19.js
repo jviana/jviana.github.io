@@ -346,11 +346,11 @@ class C19 {
             lastBarRendered.css('width', '0%');
             lastBarRendered.css('width', self.getPercentage(self.maxPT, valueActiveToBars) + '%');
             // adjust text (ptConfirmed)
-            if (valueActiveToBars <= 10) {
+            if (valueActiveToBars <= 30) {
                 lastBarRendered.addClass('text-dark');
             }
-            if (valueActiveToBars <= 10) {
-                lastBarRendered.html(('&nbsp;').repeat(4) + lastBarRendered.html());
+            if (valueActiveToBars <= 30) {
+                lastBarRendered.html(('&nbsp;').repeat(3) + lastBarRendered.html());
             }
             // adjust text (ptConfirmed) --END
             lastDate = date;
