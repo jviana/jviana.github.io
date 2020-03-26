@@ -350,7 +350,7 @@ class C19 {
                 lastBarRendered.addClass('text-dark');
             }
             if (valueActiveToBars <= 30) {
-                lastBarRendered.html(('&nbsp;').repeat(3) + lastBarRendered.html());
+                lastBarRendered.html(('&nbsp;').repeat(7) + lastBarRendered.html());
             }
             // adjust text (ptConfirmed) --END
             lastDate = date;
