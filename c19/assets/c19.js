@@ -449,33 +449,6 @@ class C19 {
         requestAnimationFrame(increase);
     }
 
-    /* const step = ts => {
-        if (!start) {
-            start = ts;
-        }
-        const progress = (ts - start) / duration;
-        let intermediateValue;
-        if (decimalDigits === 0) {
-            intermediateValue = Math.floor(progress * end);
-            if (intermediateValue <= end) {
-                obj.html(intermediateValue + aditionalCharacter);
-            } else {
-                obj.html(end);
-            }
-        } else {
-            intermediateValue = progress * end;
-            if (intermediateValue <= end) {
-                obj.html(intermediateValue.toFixed(2) + aditionalCharacter);
-            } else {
-                obj.html(end.toFixed(2) + aditionalCharacter);
-            }
-        }
-        if (progress < 1) {
-            requestAnimationFrame(step);
-        }
-    };
-    requestAnimationFrame(step); */
-
     drawPeople () {
         const self = this;
         const icon = '<span class="material-icons p-0 m-0 material-charts-icons text-info" style="opacity: 0.0">face</span>';
@@ -494,17 +467,8 @@ class C19 {
         }
         const peopleFace = container.find('.material-icons');
         $.each(peopleFace, function (i, face) {
-            setTimeout(() => self.fadeIn(face), 1 * i);
+            setTimeout(() => self.fadeIn(face), 0.1 * i);
         });
-        /* for (let i = 0; i < this.totalPT; i++) {
-            setTimeout(() => container.append(icon), 1 * i);
-        }
-        for (let i = 0; i < this.totalRecoveredPT; i++) {
-            setTimeout(() => container.append(icon2), 1 * i);
-        }
-        for (let i = 0; i < this.totalDeceasedPT; i++) {
-            setTimeout(() => container.append(icon3), 1 * i);
-        } */
     }
 
     setEnterEvents () {
