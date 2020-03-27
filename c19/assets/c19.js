@@ -378,13 +378,24 @@ class C19 {
 
     setAgeChart (initializeChart) {
         const self = this;
-        const data = this.agedescription;
+        const data = this.agedescription; // JSON
         let chartValue;
+        let chartValueMaleTotal;
+        let chartValueFemaleTotal;
+        chartValueMaleTotal = 0;
+        chartValueFemaleTotal = 0;
         this.valuesForChartByAge.push(['Grupo etário', 'Número de casos']);
         for (const [key, value] of Object.entries(data)) {
-            chartValue = value[self.dataActive.ageChart];
-            self.valuesForChartByAge.push([key + ' anos: ' + chartValue, chartValue]);
+            if (self.dataActive.ageChart === 'malefemale') {
+                chartValueMaleTotal += value.male;
+                chartValueFemaleTotal += value.female;
+            } else {
+                chartValue = value[self.dataActive.ageChart];
+                self.valuesForChartByAge.push([key + ' anos: ' + chartValue, chartValue]);
+            }
         }
+        self.valuesForChartByAge.push(['Masculino: ' + chartValueMaleTotal, chartValueMaleTotal]);
+        self.valuesForChartByAge.push(['Feminino: ' + chartValueFemaleTotal, chartValueFemaleTotal]);
         if (initializeChart) {
             google.charts.load('current', {
                 callback: this.drawAgeChart,
@@ -570,9 +581,19 @@ class C19 {
         // $('age-chart').html('');
         const data = google.visualization.arrayToDataTable(c19.valuesForChartByAge);
         const chart = new google.visualization.PieChart(document.getElementById('age-chart'));
+        let colors;
+        if (c19.dataActive.ageChart === 'malefemale') {
+            colors = {
+                0: { color: '#0698ff' },
+                1: { color: '#ff0777' }
+            };
+        } else {
+            colors = {};
+        }
         const options = {
             title: 'Caracterização dos casos confirmados',
             is3D: true,
+            slices: colors,
             titleTextStyle: {
                 color: '#455564',
                 fontSize: 14,
