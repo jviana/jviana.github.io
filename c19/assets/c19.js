@@ -461,7 +461,7 @@ class C19 {
     }
 
     drawPeople () {
-        const self = this;
+        // const self = this;
         const icon = '<span class="material-icons p-0 m-0 material-charts-icons text-info" style="">face</span>';
         const icon2 = '<span class="material-icons p-0 m-0 material-charts-icons text-success" style="">face</span>';
         const icon3 = '<span class="material-icons p-0 m-0 material-charts-icons text-secondary" style="">face</span>';
@@ -476,7 +476,7 @@ class C19 {
         for (let i = 0; i < this.totalDeceasedPT; i++) {
             container.append(icon3);
         }
-        const peopleFace = container.find('.material-icons');
+        // const peopleFace = container.find('.material-icons');
         /* $.each(peopleFace, function (i, face) {
             setTimeout(() => self.FadeIn(face), 0.1 * i);
         }); colocar nos elementos style="opacity: 0.0 */
