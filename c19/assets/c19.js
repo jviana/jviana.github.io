@@ -445,7 +445,7 @@ class C19 {
         }
     }
 
-    fadeIn (element) {
+    FadeIn (element) {
         var opacity = 0;
         const increase = _ => {
             opacity += 0.05;
@@ -462,9 +462,9 @@ class C19 {
 
     drawPeople () {
         const self = this;
-        const icon = '<span class="material-icons p-0 m-0 material-charts-icons text-info" style="opacity: 0.0">face</span>';
-        const icon2 = '<span class="material-icons p-0 m-0 material-charts-icons text-success" style="opacity: 0.0">face</span>';
-        const icon3 = '<span class="material-icons p-0 m-0 material-charts-icons text-secondary" style="opacity: 0.0">face</span>';
+        const icon = '<span class="material-icons p-0 m-0 material-charts-icons text-info" style="">face</span>';
+        const icon2 = '<span class="material-icons p-0 m-0 material-charts-icons text-success" style="">face</span>';
+        const icon3 = '<span class="material-icons p-0 m-0 material-charts-icons text-secondary" style="">face</span>';
         const container = $('#people');
         container.html('');
         for (let i = 0; i < this.totalRecoveredPT; i++) {
@@ -477,9 +477,13 @@ class C19 {
             container.append(icon3);
         }
         const peopleFace = container.find('.material-icons');
-        $.each(peopleFace, function (i, face) {
-            setTimeout(() => self.fadeIn(face), 0.1 * i);
-        });
+        /* $.each(peopleFace, function (i, face) {
+            setTimeout(() => self.FadeIn(face), 0.1 * i);
+        }); colocar nos elementos style="opacity: 0.0 */
+
+        /* $.each(peopleFace, function (i, face) {
+            $(face).show();
+        }); */
     }
 
     setEnterEvents () {
