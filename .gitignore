@@ -4,6 +4,7 @@
 # ignore folder named node_modules
 node_modules/
 c19/test.html
+pdf/
 
 #ignore all .txt files
 # *.txt
