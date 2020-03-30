@@ -346,9 +346,9 @@ class C19 {
             // lastBarRendered.css('width', '0%');
             // lastBarRendered.css('width', self.getPercentage(self.maxPT, valueActiveToBars) + '%');
             // adjust text (ptConfirmed)
-            /* if (valueActiveToBars <= 30) {
+            if (valueActiveToBars <= 30) {
                 lastBarRendered.addClass('text-dark');
-            } */
+            }
             if (valueActiveToBars <= 30) {
                 lastBarRendered.html(('&nbsp;').repeat(7) + lastBarRendered.html());
             }
