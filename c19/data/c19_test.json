@@ -1,0 +1,94 @@
+{
+    "results": [
+      {
+        "date": "20200301",
+        "ptConfirmed": 0,
+        "ptRecovered": 0,
+        "ptDeceased":0
+      },
+      {
+        "date": "20200302",
+        "ptConfirmed": 2,
+        "ptRecovered": 0,
+        "ptDeceased":0
+      },
+      {
+        "date": "20200303",
+        "ptConfirmed": 2,
+        "ptRecovered": 0,
+        "ptDeceased":0
+      },
+      {
+        "date": "20200304",
+        "ptConfirmed": 2,
+        "ptRecovered": 0,
+        "ptDeceased":0
+      },
+      {
+        "date": "20200305",
+        "ptConfirmed": 3,
+        "ptRecovered": 0,
+        "ptDeceased":0
+      },
+      {
+        "date": "20200306",
+        "ptConfirmed": 4,
+        "ptRecovered": 0,
+        "ptDeceased":0
+      },
+      {
+        "date": "20200307",
+        "ptConfirmed": 8,
+        "ptRecovered": 0,
+        "ptDeceased":0
+      }
+    ],
+    "sources": {
+      "lastDescription": "DGS",
+      "lastURL": "https://covid19.min-saude.pt/relatorio-de-situacao/"
+    },
+    "agedescription": {
+      "0-9": {
+        "male": 24,
+        "female": 40
+      },
+      "10-19": {
+        "male": 63,
+        "female": 75
+      },
+      "20-29": {
+        "male": 241,
+        "female": 347
+      },
+      "30-39": {
+        "male": 407,
+        "female": 495
+      },
+      "40-49": {
+        "male": 482,
+        "female": 664
+      },
+      "50-59": {
+        "male": 469,
+        "female": 615
+      },
+      "60-69": {
+        "male": 438,
+        "female": 412
+      },
+      "70-79": {
+        "male": 336,
+        "female": 275
+      },
+      "80+": {
+        "male": 245,
+        "female": 334
+      }
+    },
+    "info": {
+      "subject": "Covid-19 PT",
+      "author": "JV",
+      "page": 1,
+      "version": "0.3"
+    }
+  }
