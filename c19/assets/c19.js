@@ -2,6 +2,7 @@
 /* global google */
 class C19 {
     constructor () {
+        moment.locale('pt');
         this.totalPT = 0;
         this.totalDeceasedPT = 0;
         this.totalRecoveredPT = 0;
@@ -21,7 +22,8 @@ class C19 {
             monthsRendered: false
         };
         this.dataActive = {
-            ageChart: 'male'
+            ageChart: 'male',
+            yearmonth: moment().format('YYYYMMMM')
         };
         this.dataURL = 'https://jviana.github.io/c19/data/c19.json?v=' + Math.floor(Math.random() * (1000 - 1 + 1) + 1);
         this.totalVariation = {
@@ -45,6 +47,8 @@ class C19 {
         this.displayTotalRendered = false;
         this.infoCardActive = 'confirmed';
         this.agedescription = null;
+        this.todayDateNumeric = moment().format('YYYYMMDD');
+        this.todayYearMonth = moment().format('YYYYMMMM');
     };
 
     animateNumericValue2 (elem, start, end, duration, decimalDigits, aditionalCharacter = '') {
@@ -175,7 +179,7 @@ class C19 {
     }
 
     setLayoutTweaks () {
-        const todayDateNumeric = moment().format('YYYYMMDD');
+        const todayDateNumeric = this.todayDateNumeric;
         const barsmax = $('div#main-content-bars').find('div.progress-bar[data-ismax="1"]');
         const barsmin = $('div#main-content-bars').find('div.progress-bar[data-ismin="1"]');
         const currentDayBar = $('div#main-content-bars').find('div.row-day[data-date="' + todayDateNumeric + '"]').find('div.progress-bar');
@@ -226,11 +230,14 @@ class C19 {
         const months = [...this.months];
         let content;
         $.each(months, function (i, m) {
+            const info = m.split(',');
             content = $('div#month-template').html();
-            content = content.replace(/{{month}}/g, m);
+            content = content.replace(/{{month}}/g, info[1]);
+            content = content.replace(/{{yearmonth}}/g, info[0]);
             $('div#main-content-months').append(`${content}`);
             $('.btn-month').unbind('click');
             $('.btn-month').click(function (event) {
+                self.dataActive.yearmonth = $(this).attr('data-yearmonth');
                 event.preventDefault();
                 self.resetInfo();
                 self.getData();
@@ -264,7 +271,6 @@ class C19 {
         // Reset info for charts
         this.valuesForChart1 = [];
         // Reset info for charts (end)
-        moment.locale('pt');
         $.each(data, function (i, d) {
             const date = moment(d.date, 'YYYYMMDD');
             const day = date.format('D');
@@ -278,10 +284,12 @@ class C19 {
             const dateNumeric = {
                 full: date.format('YYYYMMDD'),
                 month: date.format('MM'),
+                yearmonth: date.format('YYYYMMMM'),
                 forChart1: date.format('DD.MMM')
             };
             let valueActiveToBars;
             let cssBar;
+            let cssDisplay;
             // INFO TO DISPLAY IN BARS
             switch (self.infoCardActive) {
             case 'confirmed':
@@ -325,13 +333,18 @@ class C19 {
                     dayVariationClass = 'text-muted';
                 }
             }
+            cssDisplay = '';
+            if (self.dataActive.yearmonth !== dateNumeric.yearmonth) {
+                cssDisplay = 'd-none';
+            }
             // adjust css to view (end)
             self.valuesForChart1.push([dateNumeric.forChart1, ptConfirmed, ptRecovered, ptDeceased]);
             // ------------------------------
-            self.months.add(month);
+            self.months.add(dateNumeric.yearmonth + ',' + month);
             barContent = $('div#day-template').html();
             barContent = barContent.replace(/{{date}}/g, day);
             barContent = barContent.replace(/{{cssBar}}/g, cssBar);
+            barContent = barContent.replace(/{{cssDisplay}}/g, cssDisplay);
             barContent = barContent.replace(/{{cases}}/g, ptConfirmed);
             barContent = barContent.replace(/{{ptConfirmed}}/g, valueActiveToBars);
             barContent = barContent.replace(/{{dayVariation}}/g, dayVariation);
