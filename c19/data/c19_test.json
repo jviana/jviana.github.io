@@ -41,6 +41,156 @@
         "ptConfirmed": 8,
         "ptRecovered": 0,
         "ptDeceased":0
+      },
+      {
+        "date": "20200308",
+        "ptConfirmed": 9,
+        "ptRecovered": 0,
+        "ptDeceased":0
+      },
+      {
+        "date": "20200309",
+        "ptConfirmed": 9,
+        "ptRecovered": 0,
+        "ptDeceased":0
+      },
+      {
+        "date": "20200310",
+        "ptConfirmed": 2,
+        "ptRecovered": 0,
+        "ptDeceased":0
+      },
+      {
+        "date": "20200311",
+        "ptConfirmed": 18,
+        "ptRecovered": 0,
+        "ptDeceased": 0
+      },
+      {
+        "date": "20200312",
+        "ptConfirmed": 19,
+        "ptRecovered": 1,
+        "ptDeceased": 0
+      },
+      {
+        "date": "20200313",
+        "ptConfirmed": 34,
+        "ptRecovered": 0,
+        "ptDeceased": 0
+      },
+      {
+        "date": "20200314",
+        "ptConfirmed": 57,
+        "ptRecovered": 0,
+        "ptDeceased": 0
+      },
+      {
+        "date": "20200315",
+        "ptConfirmed": 76,
+        "ptRecovered": 1,
+        "ptDeceased": 0
+      },
+      {
+        "date": "20200316",
+        "ptConfirmed": 86,
+        "ptRecovered": 1,
+        "ptDeceased": 1
+      },
+      {
+        "date": "20200317",
+        "ptConfirmed": 117,
+        "ptRecovered": 0,
+        "ptDeceased": 0
+      },
+      {
+        "date": "20200318",
+        "ptConfirmed": 194,
+        "ptRecovered": 0,
+        "ptDeceased": 1
+      },
+      {
+        "date": "20200319",
+        "ptConfirmed": 143,
+        "ptRecovered": 0,
+        "ptDeceased": 1
+      },
+      {
+        "date": "20200320",
+        "ptConfirmed": 235,
+        "ptRecovered": 2,
+        "ptDeceased": 3
+      },
+      {
+        "date": "20200321",
+        "ptConfirmed": 260,
+        "ptRecovered": 0,
+        "ptDeceased": 6
+      },
+      {
+        "date": "20200322",
+        "ptConfirmed": 320,
+        "ptRecovered": 0,
+        "ptDeceased": 2
+      },
+      {
+        "date": "20200323",
+        "ptConfirmed": 460,
+        "ptRecovered": 9,
+        "ptDeceased": 9
+      },
+      {
+        "date": "20200324",
+        "ptConfirmed": 302,
+        "ptRecovered": 8,
+        "ptDeceased": 10
+      },
+      {
+        "date": "20200325",
+        "ptConfirmed": 633,
+        "ptRecovered": 0,
+        "ptDeceased": 10
+      },
+      {
+        "date": "20200326",
+        "ptConfirmed": 549,
+        "ptRecovered": 21,
+        "ptDeceased": 17
+      },
+      {
+        "date": "20200327",
+        "ptConfirmed": 724,
+        "ptRecovered": 0,
+        "ptDeceased": 16
+      },
+      {
+        "date": "20200328",
+        "ptConfirmed": 902,
+        "ptRecovered": 0,
+        "ptDeceased": 24
+      },
+      {
+        "date": "20200329",
+        "ptConfirmed": 792,
+        "ptRecovered": 0,
+        "ptDeceased": 19
+      },
+      {
+        "date": "20200401",
+        "ptConfirmed": 792,
+        "ptRecovered": 0,
+        "ptDeceased": 19
+      },
+      {
+        "date": "20200402",
+        "ptConfirmed": 792,
+        "ptRecovered": 0,
+        "ptDeceased": 19
+      },
+      {
+        "date": "20200403",
+        "ptConfirmed": 792,
+        "ptRecovered": 0,
+        "ptDeceased": 19
       }
     ],
     "sources": {

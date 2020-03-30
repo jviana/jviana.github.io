@@ -343,17 +343,20 @@ class C19 {
             barContent = barContent.replace(/{{monthnum}}/g, dateNumeric.month);
             $('div#main-content-bars').append(`${barContent}`);
             lastBarRendered = $('div#main-content-bars').find('.progress-bar:last');
-            lastBarRendered.css('width', '0%');
-            lastBarRendered.css('width', self.getPercentage(self.maxPT, valueActiveToBars) + '%');
+            // lastBarRendered.css('width', '0%');
+            // lastBarRendered.css('width', self.getPercentage(self.maxPT, valueActiveToBars) + '%');
             // adjust text (ptConfirmed)
-            if (valueActiveToBars <= 30) {
+            /* if (valueActiveToBars <= 30) {
                 lastBarRendered.addClass('text-dark');
-            }
+            } */
             if (valueActiveToBars <= 30) {
                 lastBarRendered.html(('&nbsp;').repeat(7) + lastBarRendered.html());
             }
             // adjust text (ptConfirmed) --END
             lastDate = date;
+        });
+        $.each($('.progress-bar'), function (i, b) {
+            setTimeout(() => $(b).css('width', $(b).attr('aria-valuenow')), 100);
         });
         if (!this.displayTotalRendered) {
             this.displayTotalConfirmed();
