@@ -23,7 +23,7 @@ class C19 {
         this.dataActive = {
             ageChart: 'male'
         };
-        this.dataURL = 'https://jviana.github.io/c19/data/c19_test.json?v=' + Math.floor(Math.random() * (1000 - 1 + 1) + 1);
+        this.dataURL = 'https://jviana.github.io/c19/data/c19.json?v=' + Math.floor(Math.random() * (1000 - 1 + 1) + 1);
         this.totalVariation = {
             up: 'trending_up',
             down: 'trending_down',
