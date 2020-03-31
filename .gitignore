@@ -5,6 +5,7 @@
 node_modules/
 c19/test.html
 pdf/
+index_bak.html
 
 #ignore all .txt files
 # *.txt
