@@ -82,6 +82,17 @@ h4 {
   box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
 }
 
+.btn-month span {
+  cursor: pointer;
+  transition: height 0.3s, box-shadow 0.3s;
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+}
+
+.btn-month span:hover, .btn-month.btn-month-active span{
+  box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
+}
+
+
 /* Material icons */
 
 .material-icons {

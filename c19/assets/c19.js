@@ -229,21 +229,48 @@ class C19 {
         const self = this;
         const months = [...this.months];
         let content;
+        let lastButtonRendered;
         $.each(months, function (i, m) {
             const info = m.split(',');
             content = $('div#month-template').html();
             content = content.replace(/{{month}}/g, info[1]);
             content = content.replace(/{{yearmonth}}/g, info[0]);
             $('div#main-content-months').append(`${content}`);
-            $('.btn-month').unbind('click');
-            $('.btn-month').click(function (event) {
-                self.dataActive.yearmonth = $(this).attr('data-yearmonth');
-                event.preventDefault();
-                self.resetInfo();
-                self.getData();
-            });
+            lastButtonRendered = $('div#main-content-months').find('.btn-month:last');
         });
+
+        lastButtonRendered.addClass('btn-month-active');
+
+        $('.btn-month').unbind('click');
+        $('.btn-month').click(function (event) {
+            const btns = $('.btn-month');
+            self.dataActive.yearmonth = $(this).attr('data-yearmonth');
+            // control css buttons
+            $.each(btns, function (i, btn) {
+                btn = $(btn);
+                btn.removeClass('btn-month-active');
+                if (btn.attr('data-yearmonth') === self.dataActive.yearmonth) {
+                    btn.addClass('btn-month-active');
+                }
+            });
+            // control css buttons (end)
+            event.preventDefault();
+            self.resetInfo();
+            self.getData();
+        });
+
         this.flags.monthsRendered = true;
+    }
+
+    analyseLastMonthRendered () {
+        const months = [...this.months];
+        const lastMonth = months[months.length - 1].split(',')[0];
+        if (lastMonth !== this.dataActive.yearmonth) {
+            const bars = $('div#main-content-bars').find('div.progress-bar[data-yearmonth="' + lastMonth + '"]').closest('.row-day');
+            $.each(bars, function (i, bar) {
+                $(bars).removeClass('d-none');
+            });
+        }
     }
 
     setBars (globalInfo) {
@@ -354,6 +381,7 @@ class C19 {
             barContent = barContent.replace(/{{ismin}}/g, ismin);
             barContent = barContent.replace(/{{datenum}}/g, dateNumeric.full);
             barContent = barContent.replace(/{{monthnum}}/g, dateNumeric.month);
+            barContent = barContent.replace(/{{yearmonth}}/g, dateNumeric.yearmonth);
             $('div#main-content-bars').append(`${barContent}`);
             lastBarRendered = $('div#main-content-bars').find('.progress-bar:last');
             // lastBarRendered.css('width', '0%');
@@ -380,6 +408,7 @@ class C19 {
             this.setMonths();
         }
         this.setFooter(globalInfo.sources, lastDate);
+        this.analyseLastMonthRendered();
         setTimeout(() => self.setLayoutTweaks(), 1000);
         if (!this.chart1Rendered) {
             google.charts.load('current', {
