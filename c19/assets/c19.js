@@ -267,8 +267,9 @@ class C19 {
         const lastMonth = months[months.length - 1].split(',')[0];
         if (lastMonth !== this.dataActive.yearmonth) {
             const bars = $('div#main-content-bars').find('div.progress-bar[data-yearmonth="' + lastMonth + '"]').closest('.row-day');
+            console.log(bars);
             $.each(bars, function (i, bar) {
-                $(bars).removeClass('d-none');
+                $(bars).addClass('d-none');
             });
         }
     }
