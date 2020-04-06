@@ -127,16 +127,6 @@ h4 {
   border-radius: 1.5rem;
 }
 
-/* p.card-text {
-  font-size: 2.6rem;
-} */
-/* avoid word wrapping in counters */
-/* @media (max-width: 389px) {
-  p.card-text {
-    font-size: 2.6rem;
-  }
-}  */
-
 /* avoid word wrapping in counters */
 p.card-text {
   font-size: 3rem;
@@ -147,8 +137,6 @@ p.card-text {
       font-size: calc(1.525rem + 3.2vw);
   }
 }
-
-
 
 .material-charts-icons {
   font-size: 7px;
