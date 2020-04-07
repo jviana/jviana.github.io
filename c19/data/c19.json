@@ -236,40 +236,40 @@
     },
     "agedescription": {
       "0-9": {
-        "male": 87,
+        "male": 92,
         "female": 87
       },
       "10-19": {
-        "male": 130,
-        "female": 155
+        "male": 140,
+        "female": 166
       },
       "20-29": {
-        "male": 507,
-        "female": 708
+        "male": 538,
+        "female": 756
       },
       "30-39": {
-        "male": 768,
-        "female": 963
+        "male": 797,
+        "female": 1021
       },
       "40-49": {
-        "male": 860,
-        "female": 1269
+        "male": 901,
+        "female": 1338
       },
       "50-59": {
-        "male": 883,
-        "female": 1217
+        "male": 920,
+        "female": 1296
       },
       "60-69": {
-        "male": 733,
-        "female": 802
+        "male": 769,
+        "female": 845
       },
       "70-79": {
-        "male": 599,
-        "female": 503
+        "male": 629,
+        "female": 530
       },
       "80+": {
-        "male": 562,
-        "female": 897
+        "male": 605,
+        "female": 1012
       }
     },
     "info": {
