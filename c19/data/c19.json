@@ -221,7 +221,14 @@
         "ptConfirmed": 452,
         "ptRecovered": 65,
         "ptDeceased": 16
+      },
+      {
+        "date": "20200407",
+        "ptConfirmed": 712,
+        "ptRecovered": 44,
+        "ptDeceased": 34
       }
+
     ],
     "sources": {
       "lastDescription": "DGS",
