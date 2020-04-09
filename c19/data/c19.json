@@ -233,6 +233,12 @@
         "ptConfirmed": 699,
         "ptRecovered": 12,
         "ptDeceased": 35
+      },
+      {
+        "date": "20200409",
+        "ptConfirmed": 815,
+        "ptRecovered": 9,
+        "ptDeceased": 29
       }
 
     ],
@@ -242,40 +248,40 @@
     },
     "agedescription": {
       "0-9": {
-        "male": 97,
-        "female": 95
+        "male": 105,
+        "female": 101
       },
       "10-19": {
-        "male": 148,
-        "female": 175
+        "male": 161,
+        "female": 190
       },
       "20-29": {
-        "male": 567,
-        "female": 796
+        "male": 598,
+        "female": 846
       },
       "30-39": {
-        "male": 831,
-        "female": 1093
+        "male": 872,
+        "female": 1141
       },
       "40-49": {
-        "male": 957,
-        "female": 1423
+        "male": 1000,
+        "female": 1483
       },
       "50-59": {
-        "male": 966,
-        "female": 1386
+        "male": 1005,
+        "female": 1452
       },
       "60-69": {
-        "male": 814,
-        "female": 896
+        "male": 842,
+        "female": 938
       },
       "70-79": {
-        "male": 658,
-        "female": 568
+        "male": 676,
+        "female": 608
       },
       "80+": {
-        "male": 619,
-        "female": 1052
+        "male": 703,
+        "female": 1235
       }
     },
     "info": {
