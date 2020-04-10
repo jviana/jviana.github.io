@@ -239,6 +239,12 @@
         "ptConfirmed": 815,
         "ptRecovered": 9,
         "ptDeceased": 29
+      },
+      {
+        "date": "20200410",
+        "ptConfirmed": 1516,
+        "ptRecovered": 28,
+        "ptDeceased": 26
       }
 
     ],
