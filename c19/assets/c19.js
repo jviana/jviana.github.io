@@ -388,11 +388,13 @@ class C19 {
             // lastBarRendered.css('width', '0%');
             // lastBarRendered.css('width', self.getPercentage(self.maxPT, valueActiveToBars) + '%');
             // adjust text (ptConfirmed)
+            let spaces;
             if (valueActiveToBars <= 50) {
+                spaces = Math.floor(valueActiveToBars / 10);
+                console.log(valueActiveToBars, spaces);
+                spaces = (spaces === 0) ? 1 : spaces;
                 lastBarRendered.addClass('text-dark');
-            }
-            if (valueActiveToBars <= 50) {
-                lastBarRendered.html(('&nbsp;').repeat(7) + lastBarRendered.html());
+                lastBarRendered.html(('&nbsp;').repeat(spaces) + lastBarRendered.html());
             }
             // adjust text (ptConfirmed) --END
             lastDate = date;
