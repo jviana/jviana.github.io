@@ -390,8 +390,8 @@ class C19 {
             // adjust text (ptConfirmed)
             let spaces;
             if (valueActiveToBars <= 50) {
-                spaces = Math.floor(valueActiveToBars / 10);
-                spaces = (spaces === 0) ? 1 : spaces;
+                spaces = Math.floor(valueActiveToBars / 10) + 2;
+                // spaces = (spaces === 0) ? 1 : spaces;
                 lastBarRendered.addClass('text-dark');
                 lastBarRendered.html(('&nbsp;').repeat(spaces) + lastBarRendered.html());
             }
