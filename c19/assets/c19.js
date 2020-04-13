@@ -391,7 +391,6 @@ class C19 {
             let spaces;
             if (valueActiveToBars <= 50) {
                 spaces = Math.floor(valueActiveToBars / 10);
-                console.log(valueActiveToBars, spaces);
                 spaces = (spaces === 0) ? 1 : spaces;
                 lastBarRendered.addClass('text-dark');
                 lastBarRendered.html(('&nbsp;').repeat(spaces) + lastBarRendered.html());
