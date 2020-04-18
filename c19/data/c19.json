@@ -302,39 +302,39 @@
     "agedescription": {
       "0-9": {
         "male": 157,
-        "female": 165
+        "female": 171
       },
       "10-19": {
-        "male": 226,
-        "female": 261
+        "male": 231,
+        "female": 277
       },
       "20-29": {
-        "male": 796,
-        "female": 1217
+        "male": 828,
+        "female": 1269
       },
       "30-39": {
-        "male": 1106,
-        "female": 1543
+        "male": 1150,
+        "female": 1601
       },
       "40-49": {
-        "male": 1299,
-        "female": 1997
+        "male": 1332,
+        "female": 2056
       },
       "50-59": {
-        "male": 1310,
-        "female": 1996
+        "male": 1349,
+        "female": 2073
       },
       "60-69": {
-        "male": 1077,
-        "female": 1264
+        "male": 1107,
+        "female": 1300
       },
       "70-79": {
-        "male": 851,
-        "female": 880
+        "male": 876,
+        "female": 909
       },
       "80+": {
-        "male": 960,
-        "female": 1917
+        "male": 1000,
+        "female": 1999
       }
     },
     "info": {
