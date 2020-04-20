@@ -417,8 +417,8 @@ class C19 {
                 callback: this.drawChart,
                 packages: ['corechart']
             });
-            this.agedescription = globalInfo.agedescription;
-            this.setAgeChart(true);
+            /* this.agedescription = globalInfo.agedescription;
+            this.setAgeChart(true); */
             this.chart1Rendered = true;
         }
     }

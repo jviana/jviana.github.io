@@ -296,9 +296,9 @@
       },
       {
         "date": "20200419",
-        "ptConfirmed": 521,
-        "ptRecovered": 0,
-        "ptDeceased": 27
+        "ptConfirmed": 657,
+        "ptRecovered": 0, 
+        "ptDeceased": 21
       }
     ],
     "sources": {
