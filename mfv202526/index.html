@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise Ultra-Científica do Teu Ano Escolar 🏆</title>
+    <!-- Tailwind CSS para um design moderno e responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js para os gráficos de evolução -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts - Baloo 2 para um ar mais divertido e amigável -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .title-font {
+            font-family: 'Baloo 2', display;
+        }
+        .card-glow:hover {
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.2);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen bg-gradient-to-b from-blue-50 via-indigo-50 to-purple-50 pb-16">
+
+    <!-- HEADER / HERO -->
+    <header class="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 text-white py-12 px-6 rounded-b-[2.5rem] shadow-lg text-center">
+        <div class="absolute -top-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-xl"></div>
+        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-pink-400/20 rounded-full blur-xl"></div>
+        
+        <div class="max-w-4xl mx-auto">
+            <span class="inline-block bg-white/20 backdrop-blur-md text-yellow-300 font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-widest mb-4 border border-white/20 animate-pulse">
+                🏆 Relatório Oficial de Orgulho Parental
+            </span>
+            <h1 class="title-font text-4xl md:text-5xl font-extrabold tracking-tight mb-3">
+                10º ano de escolaridade
+            </h1>
+            <p class="text-indigo-100 max-w-xl mx-auto text-base md:text-lg font-semibold">
+                Ano letivo 2025/26
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 mt-8 space-y-8">
+
+        <!-- DESTAQUES & PRÉMIOS (CARDS DIVERTIDOS) -->
+        <section>
+            <h2 class="title-font text-2xl font-bold text-slate-700 mb-4 px-2 flex items-center gap-2">
+                <span>🏅</span> Medalhas & Conquistas de Destaque
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Recordista de Inglês -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-glow flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-2xl mb-4">👑</div>
+                        <h3 class="font-bold text-lg text-slate-800 mb-1">A Rainha das Línguas</h3>
+                        <p class="text-xs text-indigo-500 font-semibold uppercase tracking-wider mb-2">Inglês (LEI) • Média: 17.0</p>
+                        <p class="text-sm text-slate-600 italic">"Estás quase pronta para tomar um chá com a realeza britânica ou dar explicações ao teu pai!"</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Nota mais alta:</span>
+                        <span class="bg-amber-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">18 Valores</span>
+                    </div>
+                </div>
+
+                <!-- Consistência de História -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-glow flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center text-2xl mb-4">🧱</div>
+                        <h3 class="font-bold text-lg text-slate-800 mb-1">Estabilidade Histórica</h3>
+                        <p class="text-xs text-indigo-500 font-semibold uppercase tracking-wider mb-2">História A • Média: 15.0</p>
+                        <p class="text-sm text-slate-600 italic">"Nem a queda do Império Romano abala este 15.0! Consistência ao nível de um relógio suíço."</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Padrão do ano:</span>
+                        <span class="bg-teal-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">15 | 15 | 15</span>
+                    </div>
+                </div>
+
+                <!-- Progresso Extraordinário -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-glow flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center text-2xl mb-4">🚀</div>
+                        <h3 class="font-bold text-lg text-slate-800 mb-1">Foguetão em Ascensão</h3>
+                        <p class="text-xs text-indigo-500 font-semibold uppercase tracking-wider mb-2">Português • Subida de +2</p>
+                        <p class="text-sm text-slate-600 italic">"De 13 para 14, e de 14 para 15! Se continuas assim, o próximo passo é escreveres o teu próprio livro."</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Evolução:</span>
+                        <span class="bg-pink-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">↗️ 13 para 15</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GRÁFICO DE EVOLUÇÃO -->
+        <section class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
+                <div>
+                    <h2 class="title-font text-2xl font-bold text-slate-700 flex items-center gap-2">
+                        <span>📈</span> Gráfico de Trajetória Orbital
+                    </h2>
+                    <p class="text-xs text-slate-400">Usa os controlos em baixo para veres como subiste ao longo do ano.</p>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="updateChartType('line')" id="btnLine" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-indigo-600 text-white transition-all">Linhas</button>
+                    <button onclick="updateChartType('bar')" id="btnBar" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">Barras</button>
+                </div>
+            </div>
+            
+            <div class="h-80 w-full relative">
+                <canvas id="evolutionChart"></canvas>
+            </div>
+        </section>
+
+        <!-- ANALISADOR DETALHADO DE DISCIPLINAS -->
+        <section class="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
+            <div class="bg-slate-900 text-white p-6">
+                <h2 class="title-font text-xl font-bold flex items-center gap-2">
+                    <span>🔬</span> Raio-X Detalhado por Disciplina
+                </h2>
+                <p class="text-xs text-slate-400">Clica em cada uma para veres a análise ultra-secreta dos teus pais!</p>
+            </div>
+            <div class="divide-y divide-slate-100" id="accordionContainer">
+                <!-- Os dados serão preenchidos via JS para maior interatividade e dinamismo -->
+            </div>
+        </section>
+
+        <!-- SECÇÃO SECRETA DE RECOMPENSAS (O GRANDE VALE) -->
+        <section class="bg-gradient-to-r from-amber-400 to-orange-500 rounded-3xl p-8 text-white relative overflow-hidden shadow-md">
+            <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="relative z-10 max-w-2xl">
+                <span class="bg-white/20 text-white text-xs uppercase font-extrabold px-3 py-1 rounded-full">Exclusivo para a Melhor Filha</span>
+                <h2 class="title-font text-3xl font-bold mt-3 mb-2">🎁 Resgata o Teu Vale de Parabéns!</h2>
+                <p class="text-sm text-amber-500-900 mb-6 font-light">
+                    Como estas notas merecem um festejo digno de campeã, criámos um gerador de vales oficial. Escolhe o teu prémio e tira um screenshot para nos cobrares a promessa!
+                </p>
+                
+                <div class="flex flex-wrap gap-3 mb-6">
+                    <button onclick="generateGift('🍔 Jantar de Fast Food à Escolha')" class="bg-white text-orange-600 font-bold px-4 py-2.5 rounded-xl text-xs hover:bg-orange-50 transition-all shadow-sm">🍔 Jantar Especial</button>
+                    <button onclick="generateGift('🍿 Tarde de Cinema + Pipocas Gigantes')" class="bg-white text-orange-600 font-bold px-4 py-2.5 rounded-xl text-xs hover:bg-orange-50 transition-all shadow-sm">🍿 Tarde de Cinema</button>
+                    <button onclick="generateGift('🛍️ Uma Peça de Roupa Nova à Escolha!')" class="bg-white text-orange-600 font-bold px-4 py-2.5 rounded-xl text-xs hover:bg-orange-50 transition-all shadow-sm">🛍️ Roupa Nova</button>
+                    <button onclick="generateGift('🍦 Gelado Gigante com 3 Sabores')" class="bg-white text-orange-600 font-bold px-4 py-2.5 rounded-xl text-xs hover:bg-orange-50 transition-all shadow-sm">🍦 Gelado Gigante</button>
+                </div>
+
+                <!-- VALE GERADO -->
+                <div id="giftCard" class="hidden bg-white text-slate-800 p-6 rounded-2xl shadow-xl border-2 border-dashed border-orange-400 relative animate-bounce">
+                    <div class="absolute top-2 right-2 text-slate-300 font-mono text-[9px]">ID-NOTAS-PRO-2026</div>
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <span class="text-[10px] text-orange-500 font-extrabold uppercase tracking-widest">Vale de Sucesso Oficial</span>
+                            <h3 id="giftTitle" class="title-font text-xl font-bold text-slate-800 mt-1">---</h3>
+                            <p class="text-xs text-slate-500 mt-2">Válido mediante apresentação deste ecrã com um sorriso gigante. Parabéns pelo teu esforço!</p>
+                        </div>
+                        <div class="text-4xl">🎟️</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center mt-12 text-slate-400 text-xs">
+        Feito com ❤️ por quem tem muito orgulho na melhor filha do mundo.
+    </footer>
+
+    <!-- INTERATIVIDADE COM JAVASCRIPT -->
+    <script>
+        // Dados das notas extraídos da imagem
+        const subjectsData = [
+            {
+                name: "Português",
+                grades: [13, 14, 15],
+                comments: "Adorámos ver esta evolução bonita! Começaste bem, mas terminaste num nível fantástico. Quem sabe se não temos aqui a próxima grande autora nacional?",
+                status: "Matriculado",
+                color: "#ec4899", // Rosa
+                icon: "📚"
+            },
+            {
+                name: "Inglês (LEI)",
+                grades: [18, 17, 16],
+                comments: "Are you kidding me?! 18 no primeiro período é de mestre. Mesmo que tenhas baixado um milímetro, continuas a dar cartas e a dominar o inglês como ninguém na casa!",
+                status: "Matriculado",
+                color: "#f59e0b", // Amarelo
+                icon: "🇬🇧"
+            },
+            {
+                name: "Filosofia",
+                grades: [11, 11, 12],
+                comments: "Hum... Pensar sobre os grandes problemas da humanidade cansa! Mas a verdade é que subiste no final. Sócrates e Aristóteles dão-te um ligeiro aceno de aprovação!",
+                status: "Matriculado",
+                color: "#8b5cf6", // Roxo
+                icon: "💭"
+            },
+            {
+                name: "Educação Física",
+                grades: [15, 15, 16],
+                comments: "Energia, atitude e ritmo! Um 16 no último período mostra que a tua dedicação física está ao nível do teu cérebro brilhante. Continua com essa pedalada!",
+                status: "Matriculado",
+                color: "#10b981", // Verde
+                icon: "🏃‍♀️"
+            },
+            {
+                name: "História A",
+                grades: [15, 15, 15],
+                comments: "Consistência incrível. Sabias que em física, a constância perfeita é a coisa mais difícil de alcançar? Tu tornaste o 15 a tua marca histórica pessoal!",
+                status: "Matriculado",
+                color: "#06b6d4", // Ciano
+                icon: "🏰"
+            },
+            {
+                name: "Geografia A",
+                grades: [0, 16, 15], // Usamos 0 para o 'a)' para não partir o gráfico
+                gradeLabels: ["a)", "16", "15"],
+                comments: "O misterioso caso do primeiro período (a)! Não sabemos se andavas perdida no mapa, mas mal entraste no terreno, foi logo para sacar um 16 e um 15. Excelente orientação!",
+                status: "Matriculado",
+                color: "#3b82f6", // Azul
+                icon: "🌍"
+            },
+            {
+                name: "Matemática Aplicada (MACS)",
+                grades: [13, 15, 14],
+                comments: "As contas da vida estão mais do que garantidas! Um belo 15 no segundo período provou que quando te focas, os números dobram-se à tua vontade.",
+                status: "Matriculado",
+                color: "#ef4444", // Vermelho
+                icon: "📐"
+            }
+        ];
+
+        // Renderizar a tabela interativa (Accordion)
+        const accordionContainer = document.getElementById('accordionContainer');
+        subjectsData.forEach((sub, index) => {
+            const avg = (sub.grades.reduce((a,b) => a+b, 0) / (sub.grades[0] === 0 ? 2 : 3)).toFixed(1);
+            const displayGrades = sub.gradeLabels ? sub.gradeLabels : sub.grades;
+            
+            const itemHTML = `
+                <div class="hover:bg-slate-50 transition-colors">
+                    <button onclick="toggleAccordion(${index})" class="w-full p-5 flex items-center justify-between text-left focus:outline-none">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl">${sub.icon}</span>
+                            <div>
+                                <h3 class="font-bold text-slate-800 text-sm md:text-base">${sub.name}</h3>
+                                <span class="text-xs text-slate-400">Situação: ${sub.status}</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="hidden sm:flex gap-1.5">
+                                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">P1: <strong>${displayGrades[0]}</strong></span>
+                                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">P2: <strong>${displayGrades[1]}</strong></span>
+                                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">P3: <strong>${displayGrades[2]}</strong></span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-[10px] text-slate-400 block uppercase font-bold">Média</span>
+                                <span class="text-sm font-extrabold text-slate-800" style="color: ${sub.color}">${avg}</span>
+                            </div>
+                            <span id="arrow-${index}" class="text-slate-400 transform transition-transform duration-200">▼</span>
+                        </div>
+                    </button>
+                    <div id="content-${index}" class="hidden px-5 pb-5 ml-11">
+                        <!-- Vista mobile das notas -->
+                        <div class="flex sm:hidden gap-1.5 mb-3">
+                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">1º Per: <strong>${displayGrades[0]}</strong></span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">2º Per: <strong>${displayGrades[1]}</strong></span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">3º Per: <strong>${displayGrades[2]}</strong></span>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 relative">
+                            <div class="absolute -top-2 left-4 px-2 bg-white text-[10px] font-bold text-slate-400 border border-slate-100 rounded-full">Análise dos Pais</div>
+                            <p class="text-sm text-slate-600 italic">"${sub.comments}"</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            accordionContainer.innerHTML += itemHTML;
+        });
+
+        // Função para expandir/recolher accordion
+        function toggleAccordion(index) {
+            const content = document.getElementById(`content-${index}`);
+            const arrow = document.getElementById(`arrow-${index}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                arrow.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                arrow.classList.remove('rotate-180');
+            }
+        }
+
+        // Configuração e Renderização do Gráfico (Chart.js)
+        let activeChartType = 'line';
+        let evolutionChart;
+
+        function renderChart() {
+            const ctx = document.getElementById('evolutionChart').getContext('2d');
+            
+            // Criar datasets dinâmicos das disciplinas
+            const datasets = subjectsData.map(sub => {
+                // Se a primeira nota for zero (caso do "a)"), vamos omitir esse ponto de dados de forma graciosa
+                const dataPoints = sub.grades.map(g => g === 0 ? null : g);
+                
+                return {
+                    label: sub.name,
+                    data: dataPoints,
+                    borderColor: sub.color,
+                    backgroundColor: sub.color + '20', // Opacidade leve para as barras
+                    borderWidth: 3,
+                    tension: 0.3,
+                    pointRadius: 5,
+                    pointHoverRadius: 7,
+                    spanGaps: true // Permite ligar o ponto em falta do "a)"
+                };
+            });
+
+            if (evolutionChart) {
+                evolutionChart.destroy();
+            }
+
+            evolutionChart = new Chart(ctx, {
+                type: activeChartType,
+                data: {
+                    labels: ['1º Período', '2º Período', '3º Período'],
+                    datasets: datasets
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                boxWidth: 12,
+                                font: {
+                                    size: 11,
+                                    family: "'Plus Jakarta Sans', sans-serif"
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y === null || context.parsed.y === undefined) {
+                                        label += 'Não Avaliado (a)';
+                                    } else {
+                                        label += context.parsed.y + ' Valores';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            min: 8,
+                            max: 20,
+                            ticks: {
+                                stepSize: 2
+                            },
+                            grid: {
+                                color: '#e2e8f0'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Alterar o tipo de gráfico (Linha / Barras)
+        function updateChartType(type) {
+            activeChartType = type;
+            const btnLine = document.getElementById('btnLine');
+            const btnBar = document.getElementById('btnBar');
+
+            if (type === 'line') {
+                btnLine.className = "px-3 py-1.5 rounded-lg text-xs font-bold bg-indigo-600 text-white transition-all";
+                btnBar.className = "px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all";
+            } else {
+                btnBar.className = "px-3 py-1.5 rounded-lg text-xs font-bold bg-indigo-600 text-white transition-all";
+                btnLine.className = "px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all";
+            }
+            renderChart();
+        }
+
+        // Gerar Vale de Recompensa
+        function generateGift(prize) {
+            const giftCard = document.getElementById('giftCard');
+            const giftTitle = document.getElementById('giftTitle');
+            
+            giftTitle.textContent = prize;
+            giftCard.classList.remove('hidden');
+            
+            // Pequeno scroll suave até ao vale gerado para melhor experiência em mobile
+            giftCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // Inicializar o gráfico no carregamento da página
+        window.onload = function() {
+            renderChart();
+        }
+    </script>
+</body>
+</html>
